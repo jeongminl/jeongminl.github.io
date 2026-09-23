@@ -217,7 +217,7 @@ redirect_from:
     <div class="timeline-content"><em>Lachesis: Lifetime-Aware KV Cache Placement for Agent Serving across HBM and High-Bandwidth Flash</em> submitted.</div>
   </div>
 
-  <div class="timeline-item milestone">
+  <div class="timeline-item">
     <div class="timeline-date">Jun 2026</div>
     <div class="timeline-content">Joined <strong>ARC Lab, Seoul National University</strong> as an Undergraduate Researcher.</div>
   </div>
@@ -225,6 +225,98 @@ redirect_from:
   <div class="timeline-item milestone">
     <div class="timeline-date">Apr 2026</div>
     <div class="timeline-content"><em>ForeSight: Reactive Long-Horizon Task Execution with Autoregressive Planning and Monitoring</em> submitted.</div>
+  </div>
+
+</div>
+
+<h2 class="section-title">Education</h2>
+
+<div class="news-scroll-container" style="max-height: none; overflow-y: visible; padding-right: 0;">
+
+  <div class="timeline-item">
+    <div class="timeline-date" style="min-width: 120px;">2021 – Present</div>
+    <div class="timeline-content">
+      <strong>B.S. in Computer Science</strong> — Korea Advanced Institute of Science and Technology (KAIST), Daejeon, South Korea<br>
+      <span style="color: var(--port-muted); font-size: 0.9em;">GPA: 4.17 / 4.30 (Current)</span>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date" style="min-width: 120px;">2026</div>
+    <div class="timeline-content">
+      <strong>Exchange Programme</strong> — University of California, Santa Cruz, California, USA<br>
+      <span style="color: var(--port-muted); font-size: 0.9em;">GPA: 4.0 / 4.0</span>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date" style="min-width: 120px;">2015 – 2020</div>
+    <div class="timeline-content">
+      <strong>Anglo-Chinese School (Independent)</strong> — Singapore<br>
+      <span style="color: var(--port-muted); font-size: 0.9em;">International Baccalaureate Score: 45 / 45</span>
+    </div>
+  </div>
+
+</div>
+
+<h2 class="section-title">Honors &amp; Awards</h2>
+
+<div class="news-scroll-container" style="max-height: none; overflow-y: visible; padding-right: 0;">
+
+  <div class="timeline-item milestone">
+    <div class="timeline-date" style="min-width: 80px;">2026</div>
+    <div class="timeline-content">
+      <strong>IPESK Next-Generation Engineer</strong> — South Korea<br>
+      <span style="color: var(--port-muted); font-size: 0.9em;">Awarded to top students in nationwide research universities.</span>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date" style="min-width: 80px;">2025</div>
+    <div class="timeline-content">
+      <strong>National Science &amp; Technology Scholarship</strong> — South Korea<br>
+      <span style="color: var(--port-muted); font-size: 0.9em;">Awarded to top engineering and science students nationwide.</span>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date" style="min-width: 80px;">2025</div>
+    <div class="timeline-content">
+      <strong>Department Honors Scholarship (Valedictorian)</strong> — KAIST<br>
+      <span style="color: var(--port-muted); font-size: 0.9em;">Awarded to the top student in each department per semester.</span>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date" style="min-width: 80px;">2025</div>
+    <div class="timeline-content">
+      <strong>Dean's List, School of Computing</strong> — KAIST<br>
+      <span style="color: var(--port-muted); font-size: 0.9em;">Awarded to the top 3% of students in the School of Computing per semester.</span>
+    </div>
+  </div>
+
+  <div class="timeline-item milestone">
+    <div class="timeline-date" style="min-width: 80px;">2020</div>
+    <div class="timeline-content">
+      <strong>Outstanding Award, International Mathematical Modelling Challenge</strong> — World<br>
+      <span style="color: var(--port-muted); font-size: 0.9em;">Highest award in the challenge, given to the top 2 teams out of 54 participating teams worldwide.</span>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date" style="min-width: 80px;">2018</div>
+    <div class="timeline-content">
+      <strong>Korean Association in Singapore Scholarship</strong> — Singapore<br>
+      <span style="color: var(--port-muted); font-size: 0.9em;">Awarded to top Korean students in Singapore.</span>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date" style="min-width: 80px;">2018</div>
+    <div class="timeline-content">
+      <strong>First Place &amp; POSB Award, i.code</strong> — Singapore<br>
+      <span style="color: var(--port-muted); font-size: 0.9em;">National Infocomm Competition.</span>
+    </div>
   </div>
 
 </div>

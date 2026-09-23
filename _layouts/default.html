@@ -40,6 +40,24 @@ layout: compress
       box-sizing: border-box;
     }
 
+    /* ================================================
+       GLOBAL AVATAR STYLES — Applied on every page
+       Ensures oval shape + face-zoom persists when
+       navigating between About / Portfolio / Publications
+       ================================================ */
+    .left-sidebar img.author__avatar,
+    .sidebar img.author__avatar {
+      border-radius: 50% / 50% !important;
+      object-fit: cover !important;
+      object-position: 50% 12% !important;
+      width: 100% !important;
+      max-width: 230px !important;
+      height: 300px !important;
+      display: block !important;
+      margin: 0 auto !important;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.07) !important;
+    }
+
     /* 📱 মোবাইল এবং ট্যাবলেট লেআউট (Mobile & Tablet View) */
     @media (max-width: 1024px) {
       .main-container {
