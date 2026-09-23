@@ -1,97 +1,168 @@
 {
   "basics": {
-    "name": "Your Sidebar Name",
-    "email": "none@example.org",
+    "name": "Jeongmin Lee",
+    "email": "jeongminl@kaist.ac.kr",
     "phone": "",
-    "website": "https://academicpages.github.io",
-    "summary": "Currently employed at Red Brick University. Short biography for the left-hand sidebar",
+    "website": "https://jeongminl.github.io",
+    "summary": "Interested in computer architecture and systems, with a specific focus on hardware-software codesign and accelerator architecture for machine learning applications to improve performance and efficiency.",
     "location": {
       "address": "",
       "postalCode": "",
-      "city": "Earth",
-      "countryCode": "US",
+      "city": "Daejeon / Seoul",
+      "countryCode": "KR",
       "region": ""
     },
     "profiles": [
       {
-        "network": "Google Scholar",
-        "username": "",
-        "url": "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
-      },
-      {
-        "network": "ORCID",
-        "username": "",
-        "url": "https://orcid.org/yourorcidurl"
-      },
-      {
         "network": "GitHub",
-        "username": "academicpages",
-        "url": "https://github.com/academicpages"
+        "username": "jeongminl",
+        "url": "https://github.com/jeongminl"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "jeongmin",
+        "url": "https://www.linkedin.com/in/jeongmin"
       }
     ]
   },
-  "work": [],
+  "work": [
+    {
+      "company": "ARC Lab, Seoul National University",
+      "position": "Undergraduate Researcher",
+      "website": "",
+      "startDate": "2026-06",
+      "endDate": "Present",
+      "summary": "Developed a lifetime-informed KV cache routing mechanism to reduce flash wear on High Bandwidth Flash in heterogeneous memory systems, extending flash lifetime by up to 3x in Agentic AI serving scenarios.",
+      "highlights": []
+    },
+    {
+      "company": "Litz Lab, UC Santa Cruz",
+      "position": "Undergraduate Researcher",
+      "website": "",
+      "startDate": "2026-01",
+      "endDate": "2026-06",
+      "summary": "Implemented SystemVerilog latency/bandwidth measurement modules on BittWare FPGA, PCIe MMIO/DMA user space exposure, and investigated STTRAM module characteristics.",
+      "highlights": []
+    },
+    {
+      "company": "VIA Group, KAIST",
+      "position": "Undergraduate Researcher",
+      "website": "",
+      "startDate": "2025-07",
+      "endDate": "2025-12",
+      "summary": "Implemented cycle-level simulator in C++ for sparse CNN accelerator; runtime GPU-to-CPU memory manager in C++ and CUDA.",
+      "highlights": []
+    },
+    {
+      "company": "RIRO Lab, KAIST",
+      "position": "Undergraduate Researcher",
+      "website": "",
+      "startDate": "2025-02",
+      "endDate": "2025-07",
+      "summary": "Developed long-term horizon planning and replanning robotics module with 50+% replanning success rate under action disruptions.",
+      "highlights": []
+    },
+    {
+      "company": "Defense Security Agency",
+      "position": "Analyst",
+      "website": "",
+      "startDate": "2023-07",
+      "endDate": "2025-01",
+      "summary": "Developed and implemented SIGINT algorithms.",
+      "highlights": []
+    }
+  ],
   "education": [
     {
-      "institution": "GitHub University",
-      "area": "Ph.D in Version Control Theory",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2018",
-      "gpa": null,
-      "courses": []
+      "institution": "Korea Advanced Institute of Science and Technology (KAIST)",
+      "area": "B.S in Computer Science",
+      "studyType": "Undergraduate",
+      "startDate": "2021",
+      "endDate": "Present",
+      "gpa": "4.17/4.3",
+      "courses": [
+        "Systems Programming",
+        "Computer Organization",
+        "Operating Systems",
+        "Introduction to Artificial Intelligence",
+        "Machine Learning Basics and Applications"
+      ]
     },
     {
-      "institution": "GitHub University",
-      "area": "M.S. in Jekyll",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2014",
-      "gpa": null,
-      "courses": []
+      "institution": "University of California, Santa Cruz",
+      "area": "Computer Science (Exchange Programme)",
+      "studyType": "Exchange",
+      "startDate": "2026",
+      "endDate": "2026",
+      "gpa": "4.0/4.0",
+      "courses": [
+        "Logic Design",
+        "Parallel and Concurrent Programming",
+        "Compiler Design",
+        "Embedded System Design"
+      ]
     },
     {
-      "institution": "GitHub University",
-      "area": "B.S. in GitHub",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2012",
-      "gpa": null,
+      "institution": "Anglo-Chinese School (Independent)",
+      "area": "International Baccalaureate",
+      "studyType": "High School",
+      "startDate": "2015",
+      "endDate": "2020",
+      "gpa": "45/45",
       "courses": []
     }
   ],
-  "skills": [],
-  "languages": [],
+  "skills": [
+    {
+      "name": "Programming Languages",
+      "level": "",
+      "keywords": ["Python", "C/C++", "Rust", "Verilog/SystemVerilog", "Scala", "Java"]
+    },
+    {
+      "name": "ML Frameworks",
+      "level": "",
+      "keywords": ["PyTorch", "TensorFlow"]
+    },
+    {
+      "name": "Design Tools & Hardware",
+      "level": "",
+      "keywords": ["Vivado", "BittWare FPGA", "PCIe", "MMIO", "DMA"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native"
+    },
+    {
+      "language": "Korean",
+      "fluency": "Native"
+    },
+    {
+      "language": "Spanish",
+      "fluency": "Limited"
+    },
+    {
+      "language": "Chinese",
+      "fluency": "Limited"
+    }
+  ],
   "interests": [],
   "references": [],
   "publications": [
     {
-      "name": "Paper Title Number 1",
-      "publisher": "Journal 1",
-      "releaseDate": "2009-10-01",
-      "website": "https://academicpages.github.io/files/paper1.pdf",
-      "summary": "This paper is about the number 1. The number 2 is left for future work."
+      "name": "Lachesis: Lifetime-Aware KV Cache Placement for Agent Serving across HBM and High-Bandwidth Flash",
+      "publisher": "In Submission",
+      "releaseDate": "2026-09",
+      "website": "",
+      "summary": "Lifetime-informed KV cache routing and placement mechanism to reduce flash wear on High Bandwidth Flash in heterogeneous memory systems, extending flash lifetime by up to 3x."
     },
     {
-      "name": "Paper Title Number 2",
-      "publisher": "Journal 1",
-      "releaseDate": "2010-10-01",
-      "website": "https://academicpages.github.io/files/paper2.pdf",
-      "summary": "This paper is about the number 2. The number 3 is left for future work."
-    },
-    {
-      "name": "Paper Title Number 3",
-      "publisher": "Journal 1",
-      "releaseDate": "2015-10-01",
-      "website": "https://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about the number 3. The number 4 is left for future work."
-    },
-    {
-      "name": "Paper Title Number 4",
-      "publisher": "GitHub Journal of Bugs",
-      "releaseDate": "2024-02-17",
-      "website": "https://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about fixing template issue #693."
+      "name": "ForeSight: Reactive Long-Horizon Task Execution with Autoregressive Planning and Monitoring",
+      "publisher": "In Submission",
+      "releaseDate": "2026-04",
+      "website": "",
+      "summary": "Reactive long-horizon task execution through autoregressive planning and continuous monitoring for robotic replanning."
     }
   ],
   "presentations": [

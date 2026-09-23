@@ -131,12 +131,12 @@
 <div class="sidebar-wrap" itemscope itemtype="http://schema.org/Person">
 
   <div class="author__avatar" style="text-align: center; margin-bottom: 15px;">
-  <img src="{{ base_path }}/images/{{ author.avatar | default: 'profile.png' }}" class="author__avatar hover-lift" alt="{{ author.name | default: 'John Doe' }}" fetchpriority="high" width="240" height="240" style="border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.06); width: 100%; max-width: 240px; height: auto; aspect-ratio: 1/1; object-fit: cover; object-position: top;">
+  <img src="{{ base_path }}/images/{{ author.avatar | default: 'profile.jpg' }}" class="author__avatar hover-lift" alt="{{ author.name | default: 'Jeongmin Lee' }}" fetchpriority="high" width="240" height="240" style="border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.06); width: 100%; max-width: 240px; height: auto; aspect-ratio: 1/1; object-fit: cover; object-position: top;">
   </div>
 
   <div class="author__content" style="text-align: center; margin-bottom: 25px;">
-    <h3 style="margin: 0; color: #2c3e50; font-size: 1.1em; font-weight: 700; text-transform: uppercase;">{{ author.name | default: "John Doe" }}</h3>
-    <h4 style="font-size: 0.7em; color: #666; margin-top: 5px; margin-bottom: 0; font-weight: 500;">{{ author.description | default: "Open Source Enthusiast" }}</h4>
+    <h3 style="margin: 0; color: #2c3e50; font-size: 1.1em; font-weight: 700; text-transform: uppercase;">{{ author.name | default: "Jeongmin Lee" }}</h3>
+    <h4 style="font-size: 0.7em; color: #666; margin-top: 5px; margin-bottom: 0; font-weight: 500;">{{ author.description | default: "Undergraduate Researcher" }}</h4>
   </div>
 
   <div style="margin-bottom: 30px;">
@@ -175,6 +175,7 @@
     </div>
   </div>
 
+  {% comment %}
   <div style="margin-bottom: 35px; padding: 0 5px;">
     <div class="sidebar-section-title">Affiliations</div>
     
@@ -183,9 +184,10 @@
       <img src="{{ base_path }}/images/lab-placeholder.png" class="affil-logo hover-lift" alt="Climate Analytics Lab" width="80" height="60" style="width: 75px; height: auto;">
     </div>
   </div>
+  {% endcomment %}
 
   <div style="margin-top: 30px; text-align: center; border-top: 1px solid #eaeaea; padding-top: 20px;">
-    <a href="{{ base_path }}/files/John_Doe_CV.pdf" target="_blank" class="cv-button">
+    <a href="{{ base_path }}/files/CV_JeongminLee%20(7).pdf" target="_blank" class="cv-button">
       <i class="fas fa-file-pdf" style="margin-right: 6px;"></i> Download CV
     </a>
   </div>
