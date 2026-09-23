@@ -209,7 +209,7 @@ redirect_from:
   <span class="pill">Heterogeneous Memory</span> -->
 </div>
 
-<h2 class="section-title">Recent News</h2>
+<!-- <h2 class="section-title">Recent News</h2>
 <div class="news-scroll-container">
   
   <div class="timeline-item milestone">
@@ -227,7 +227,7 @@ redirect_from:
     <div class="timeline-content"><em>ForeSight: Reactive Long-Horizon Task Execution with Autoregressive Planning and Monitoring</em> submitted.</div>
   </div>
 
-</div>
+</div> -->
 
 <h2 class="section-title">Education</h2>
 
@@ -263,7 +263,7 @@ redirect_from:
 
 <div class="news-scroll-container" style="max-height: none; overflow-y: visible; padding-right: 0;">
 
-  <div class="timeline-item milestone">
+  <div class="timeline-item ">
     <div class="timeline-date" style="min-width: 80px;">2026</div>
     <div class="timeline-content">
       <strong>IPESK Next-Generation Engineer</strong> — South Korea<br>
@@ -295,7 +295,7 @@ redirect_from:
     </div>
   </div>
 
-  <div class="timeline-item milestone">
+  <div class="timeline-item ">
     <div class="timeline-date" style="min-width: 80px;">2020</div>
     <div class="timeline-content">
       <strong>Outstanding Award, International Mathematical Modelling Challenge</strong> — World<br>
