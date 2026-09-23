@@ -96,11 +96,12 @@
       border-bottom: 1px solid #eaeaea; 
     }
     .author__avatar img {
-      width: 180px !important;     
-      height: auto !important;     
-      aspect-ratio: 3/4 !important;
+      width: 170px !important;     
+      height: 220px !important;     
       box-shadow: 0 4px 10px rgba(0,0,0,0.05) !important;
-      border-radius: 12px !important;
+      border-radius: 50% / 50% !important;
+      object-fit: cover !important;
+      object-position: 50% 30% !important;
     }
     .affil-grid { gap: 15px !important; }
     .affil-logo { max-width: 100px !important; height: auto !important; }
@@ -109,8 +110,8 @@
   /* Laptop Sidebar Spacing Fix */
   @media (min-width: 1025px) {
     .sidebar-wrap {
-      padding-left: 0 !important; 
-      margin-right: 0 !important;
+      padding-left: 80px !important; 
+      margin-right: -60px !important;
     }
   }
 
@@ -125,14 +126,14 @@
 
   .sidebar-wrap .author__avatar img {
     display: block;
-    margin: 0 auto !important;
+    margin: 0 auto;
   }
 </style>
 
 <div class="sidebar-wrap" itemscope itemtype="http://schema.org/Person">
 
   <div class="author__avatar" style="text-align: center; margin-bottom: 15px;">
-  <img src="{{ base_path }}/images/{{ author.avatar | default: 'profile.jpg' }}" class="author__avatar hover-lift" alt="{{ author.name | default: 'Jeongmin Lee' }}" fetchpriority="high" width="240" height="320" style="border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); width: 100%; max-width: 240px; height: auto; aspect-ratio: 3/4; object-fit: cover; object-position: center;">
+  <img src="{{ base_path }}/images/{{ author.avatar | default: 'profile.jpg' }}" class="author__avatar hover-lift" alt="{{ author.name | default: 'Jeongmin Lee' }}" fetchpriority="high" width="230" height="300" style="border-radius: 50% / 50%; box-shadow: 0 4px 14px rgba(0,0,0,0.07); width: 100%; max-width: 230px; height: 300px; object-fit: cover; object-position: 50% 30%;">
   </div>
 
   <div class="author__content" style="text-align: center; margin-bottom: 25px;">

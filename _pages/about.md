@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "BIOGRAPHY"
+title: "Jeongmin Lee"
 author_profile: false
 redirect_from: 
   - /about/
@@ -189,7 +189,7 @@ redirect_from:
 </div>
 
 <div class="content-text">
-  Previously, I was also an undergraduate researcher at <strong>UC Santa Cruz</strong>, advised by <a href="https://hlitz.github.io/">Prof. Heiner Litz</a>.
+  Previously, I was an undergraduate researcher at <strong>UC Santa Cruz</strong>, advised by <a href="https://hlitz.github.io/">Prof. Heiner Litz</a>.
 </div>
 
 <!-- <div class="content-text">
