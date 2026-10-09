@@ -1,0 +1,369 @@
+/* ==========================================================================
+   PAGE COMPONENTS
+   Building blocks shared by the hand-written pages in _pages/.
+   ========================================================================== */
+
+/* Section headings */
+.page__content .section-title {
+  margin-top: 40px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--global-border-color);
+  color: var(--global-primary-color);
+  font-size: 1.15em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+
+  &:first-child {
+    margin-top: 10px;
+  }
+}
+
+/* Bio paragraphs */
+.content-text {
+  margin-bottom: 20px;
+  color: var(--global-text-color);
+  font-size: 0.95em;
+  line-height: 1.7;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Highlighted call-out box */
+.collab-box {
+  margin: 30px 0;
+  padding: 14px 18px;
+  border-left: 4px solid var(--global-primary-color);
+  border-radius: 0 4px 4px 0;
+  background-color: var(--global-accent-bg-color);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  color: var(--global-primary-color);
+  font-size: 0.95em;
+  font-weight: 500;
+  line-height: 1.6;
+  text-align: justify;
+  text-justify: inter-word;
+
+  i {
+    margin-right: 8px;
+    color: var(--global-text-color-muted);
+  }
+}
+
+/* Research-interest pills */
+.interest-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px 0 30px;
+}
+
+.pill {
+  padding: 6px 14px;
+  border-radius: 4px;
+  background-color: var(--global-primary-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  color: #fff;
+  font-size: 0.85em;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+/* ==========================================================================
+   TIMELINE (dated entries: education, experience, awards, news)
+   ========================================================================== */
+
+.timeline-container {
+  margin-top: 20px;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 95px minmax(0, 1fr);
+  column-gap: 12px;
+  align-items: baseline;
+  margin-bottom: 20px;
+  padding: 4px 0;
+  font-size: 0.9em;
+  line-height: 1.6;
+
+  /* Date ranges ("Jun 2026 – Present") need a wider date column */
+  .timeline-container--wide & {
+    grid-template-columns: 165px minmax(0, 1fr);
+  }
+
+  &.milestone {
+    margin: 2px 0 12px -12px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    background-color: var(--global-accent-bg-color);
+  }
+
+  @media (max-width: $medium) {
+    grid-template-columns: minmax(0, 1fr);
+
+    .timeline-container--wide & {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .timeline-date {
+      margin-bottom: 4px;
+      font-size: 0.85em;
+      color: var(--global-primary-color);
+    }
+
+    &.milestone {
+      margin-left: 0;
+      padding: 10px 12px;
+    }
+  }
+}
+
+.timeline-date {
+  font-weight: 700;
+  color: var(--global-text-color-muted);
+}
+
+.timeline-content {
+  color: var(--global-text-color);
+  word-wrap: break-word;
+}
+
+.timeline-meta {
+  color: var(--global-text-color-muted);
+  font-size: 0.9em;
+}
+
+.timeline-note {
+  color: var(--global-text-color-muted);
+  font-size: 0.85em;
+}
+
+.experience-desc {
+  margin: 6px 0 0;
+  padding-left: 18px;
+  list-style-type: disc;
+  color: var(--global-text-color);
+
+  li {
+    margin-bottom: 4px;
+    line-height: 1.55;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+}
+
+/* Scrollable news list */
+.news-scroll-container {
+  max-height: 500px;
+  overflow-y: auto;
+  margin-top: 20px;
+  padding-right: 15px;
+}
+
+/* ==========================================================================
+   SKILLS
+   ========================================================================== */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin: 20px 0 40px;
+
+  @media (max-width: 850px) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.skill-category {
+  & + & {
+    margin-top: 20px;
+  }
+
+  h3 {
+    margin: 0 0 12px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--global-border-color);
+    color: var(--global-text-color-muted);
+    font-size: 0.85em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+}
+
+.badge-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-badge {
+  display: flex;
+  align-items: center;
+  padding: 5px 12px;
+  border: 1px solid var(--global-border-color);
+  border-radius: 4px;
+  background-color: var(--global-card-bg-color);
+  color: var(--global-text-color);
+  font-size: 0.82em;
+  font-weight: 500;
+  transition: all 0.3s ease;
+
+  img,
+  i {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    object-fit: contain;
+    filter: grayscale(100%) opacity(70%);
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    border-color: var(--global-primary-color);
+    color: var(--global-primary-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    img,
+    i {
+      filter: none;
+    }
+  }
+}
+
+/* ==========================================================================
+   PUBLICATIONS
+   ========================================================================== */
+
+.pub-list {
+  margin-bottom: 40px;
+  padding-left: 20px;
+  color: var(--global-text-color);
+  font-size: 0.95em;
+  line-height: 1.6;
+
+  li {
+    margin-bottom: 35px;
+    padding-left: 5px;
+  }
+
+  @media (max-width: $medium) {
+    padding-left: 15px;
+
+    li {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.paper-title {
+  display: block;
+  margin: 0 0 6px;
+  color: var(--global-primary-color);
+  font-size: 1.05em;
+  font-weight: 700;
+  line-height: 1.4;
+
+  @media (max-width: $medium) {
+    font-size: 1em;
+  }
+}
+
+.authors-list {
+  margin-bottom: 12px;
+  color: var(--global-text-color-muted);
+  font-size: 0.9em;
+}
+
+.paper-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.meta-btn {
+  display: inline-block;
+  padding: 4px 10px;
+  border: 1px solid var(--global-border-color);
+  border-radius: 4px;
+  background-color: var(--global-card-bg-color);
+  color: var(--global-text-color-muted);
+  font-family: inherit;
+  font-size: 0.75em;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  .page__content & {
+    text-decoration: none;
+  }
+
+  @media (max-width: $medium) {
+    padding: 4px 8px;
+    font-size: 0.7em;
+  }
+}
+
+.venue-btn {
+  border-color: var(--global-primary-color);
+  background-color: var(--global-primary-color);
+  color: #fff;
+}
+
+.link-btn {
+  border-color: #d0e3f7;
+  background-color: var(--global-accent-bg-color);
+  color: #3172b4;
+
+  &:hover {
+    border-color: #3172b4;
+  }
+}
+
+.abstract-btn {
+  text-transform: uppercase;
+
+  &:hover {
+    border-color: var(--global-primary-color);
+    background-color: var(--global-primary-color);
+    color: #fff;
+  }
+}
+
+.info-box {
+  display: none;
+  margin-top: 15px;
+  padding: 16px 20px;
+  border: 1px solid var(--global-border-color);
+  border-left: 3px solid var(--global-primary-color);
+  border-radius: 0 4px 4px 0;
+  background: var(--global-card-bg-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  font-size: 0.95em;
+
+  &.open {
+    display: block;
+  }
+
+  p {
+    margin: 0 0 12px;
+    color: var(--global-text-color);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (max-width: $medium) {
+    padding: 14px 16px;
+  }
+}

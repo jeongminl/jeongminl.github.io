@@ -1,0 +1,31 @@
+/* ==========================================================================
+   SITE PALETTE
+   ========================================================================== */
+
+$primary-color              : #2c3e50;  // dark academic blue
+$text-color                 : #3b3b3b;
+$muted-color                : #64748b;
+$light-muted-color          : #8fa0b3;
+$border-color               : #eaeaea;
+
+$warning-color              : #f89406;
+$border-radius              : 4px;
+$global-transition          : all 0.2s ease-in-out;
+$navicon-width              : 28px;
+$navicon-height             : 4px;
+
+:root {
+  --global-primary-color      : #{$primary-color};
+  --global-bg-color           : #fff;
+  --global-card-bg-color      : #fdfdfd;
+  --global-accent-bg-color    : #f0f7ff;
+  --global-footer-bg-color    : #fcfcfc;
+  --global-border-color       : #{$border-color};
+  --global-text-color         : #{$text-color};
+  --global-text-color-muted   : #{$muted-color};
+  --global-text-color-light   : #{$light-muted-color};
+  --global-link-color         : #52adc8;
+  --global-link-color-hover   : #{mix(#000, #2f7f93, 25%)};
+  --global-link-color-visited : #{mix(#fff, #2f7f93, 25%)};
+  --global-code-bg-color      : #fafafa;
+}

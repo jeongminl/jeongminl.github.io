@@ -3,132 +3,26 @@ layout: compress
 ---
 {% include base_path %}
 <!doctype html>
-<html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
+<html lang="{{ site.locale | slice: 0,2 }}">
 
 <head>
   {% include head.html %}
-  {% include head/custom.html %}
-  
-  <style>
-    /* Consistent Centering & Zoom Constraints */
-    .main-container {
-      display: flex;
-      flex-direction: row;
-      flex: 1;
-      max-width: 1400px;
-      margin: 0 auto;
-      width: 100%;
-      box-sizing: border-box;
-      align-items: stretch;
-      padding: 0 20px;
-    }
-
-    /* Masthead & Footer alignment to match container */
-    .masthead__inner-wrap {
-      max-width: 1400px !important;
-      margin: 0 auto !important;
-      width: 100% !important;
-      box-sizing: border-box !important;
-      padding-left: 20px !important;
-      padding-right: 20px !important;
-    }
-
-    .site-footer .footer-wrapper {
-      max-width: 1400px !important;
-      margin: 0 auto !important;
-      width: 100% !important;
-      box-sizing: border-box !important;
-      padding-left: 20px !important;
-      padding-right: 20px !important;
-    }
-
-    .left-sidebar {
-      width: 320px;
-      flex-shrink: 0;
-      padding: 0 15px;
-      box-sizing: border-box;
-      background-color: #ffffff;
-    }
-
-    .right-content {
-      flex: 1;
-      padding: 0 15px 0 25px;
-      min-width: 0;
-      box-sizing: border-box;
-    }
-
-    /* Ensure sidebar in default.html doesn't get pushed by legacy float/fixed styles */
-    #main.main-container > .sidebar.left-sidebar {
-      position: static !important;
-      float: none !important;
-      padding-top: 0 !important;
-      max-width: 320px !important;
-    }
-
-    #main.main-container > .page.right-content {
-      float: none !important;
-      width: auto !important;
-      margin: 0 !important;
-    }
-
-    /* ================================================
-       GLOBAL AVATAR STYLES — Applied on every page
-       Ensures oval shape + face-zoom persists when
-       navigating between About / Experience / Publications / Awards
-       ================================================ */
-    .left-sidebar img.author__avatar,
-    .sidebar img.author__avatar {
-      border-radius: 50% / 50% !important;
-      object-fit: cover !important;
-      object-position: 50% 12% !important;
-      width: 100% !important;
-      max-width: 230px !important;
-      height: 300px !important;
-      display: block !important;
-      margin: 0 auto !important;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.07) !important;
-    }
-
-    /* 📱 Mobile and Tablet View */
-    @media (max-width: 1024px) {
-      .main-container {
-        flex-direction: column;
-        padding: 0 15px;
-      }
-      
-      .left-sidebar {
-        width: 100%;
-        border-right: none;
-        border-bottom: 2px solid #eeeeee;
-        padding: 20px 15px;
-        text-align: center;
-      }
-
-      .right-content {
-        padding: 20px 0;
-      }
-    }
-  </style>
 </head>
 
-<body style="margin:0; display:flex; flex-direction:column; min-height:100vh; background-color:#ffffff;">
-
+<body>
   {% include masthead.html %}
 
-  <div id="main" role="main" class="main-container">
-
-    <aside class="sidebar left-sidebar">
+  <div class="site-layout">
+    <aside class="site-sidebar">
       {% include author-profile.html %}
     </aside>
 
-    <article class="page right-content">
+    <main id="main" class="site-content">
       {{ content }}
-    </article>
-
+    </main>
   </div>
 
   {% include footer.html %}
   {% include scripts.html %}
-
 </body>
 </html>

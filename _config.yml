@@ -8,7 +8,6 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-site_theme               : "default"
 title                    : "Home"
 title_separator          : "-"
 name                     : &name "Jeongmin Lee"
@@ -17,171 +16,51 @@ url                      : "https://jeongminl.github.io"
 baseurl                  : "" 
 repository               : "jeongminl/jeongminl.github.io"
 
-# Site Author - The following control what appear as part of the author content on the side bar.
-#               If a field is blank the icon and link will not appear, otherwise it will be shown.
-#               Additional customization can be done by editing /_includes/author-profile.html
+# Site Author - shown in the sidebar on every page (_includes/author-profile.html).
+#               Links whose field is blank are not shown.
 author:
   # Biographic information
   avatar           : "profile.jpg"
   name             : "Jeongmin Lee"
   description      : "Undergraduate Researcher | KAIST & SNU ARC Lab"
-  pronouns         : ""
-  bio              : "Interested in computer architecture and systems, with a specific focus on hardware-software codesign and accelerator architecture for machine learning applications to improve performance and efficiency."
-  location         : "Daejeon / Seoul, South Korea"
-  employer         : "KAIST / Seoul National University"
-  uri              : 
-  email            : "jeongminl@kaist.ac.kr" 
-
-  # Academic websites
-  academia         : 
-  arxiv            : 
-  googlescholar    : 
-  impactstory      : 
-  orcid            : 
-  semantic         : 
-  pubmed           : 
-  researchgate     : 
-  scopus           : 
-
-  # Repositories and software development
-  bitbucket        : 
-  codepen          : 
-  dribbble         : 
+  email            : "jeongminl@kaist.ac.kr"
   github           : "jeongminl"
-  kaggle           : 
-  stackoverflow    : 
-
-  # Social media
-  artstation       : 
-  bluesky          : 
-  facebook         : 
-  flickr           : 
-  foursquare       : 
-  goodreads        : 
-  google_plus      : 
-  keybase          : 
-  instagram        : 
-  lastfm           : 
   linkedin         : "jeongmin-lee-667353244"
-  mastodon         : 
-  medium           : 
-  pinterest        : 
-  soundcloud       : 
-  steam            : 
-  telegram         : 
-  tumblr           : 
-  twitter          : 
-  vine             : 
-  weibo            : 
-  wikipedia        : 
-  xing             : 
-  youtube          : 
-  zhihu            : 
-
-# Publication Category - The following the list of publication categories and their headings
-publication_category:
-  books:
-    title: 'Books'
-  manuscripts:
-    title: 'Journal Articles'    
-  conferences:
-    title: 'Conference Papers'
-
-# Site Settings
-teaser                   :  
-breadcrumbs              : false
-words_per_minute         : 160
-future                   : true
-read_more                : "disabled" 
-talkmap_link             : false      
-comments:
-  provider               : 
-  disqus:
-    shortname            :
-  discourse:
-    server               : 
-  facebook:
-    appid                :
-    num_posts            : 
-    colorscheme          : 
-staticman:
-  allowedFields          : ['name', 'email', 'url', 'message']
-  branch                 : "gh-pages" 
-  commitMessage          : "New comment."
-  filename               : comment-{@timestamp}
-  format                 : "yml"
-  moderation             : true
-  path                   : "_data/comments/{options.slug}"
-  requiredFields         : ['name', 'email', 'message']
-  transforms:
-    email                : "md5"
-  generatedFields:
-    date:
-      type               : "date"
-      options:
-        format           : "iso8601" 
-atom_feed:
-  hide                   : false     
-  path                   : 
+  googlescholar    :
+  orcid            :
 
 # SEO Related
 google_site_verification :
 bing_site_verification   :
-alexa_site_verification  :
-yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : &twitter
-facebook:
   username               :
-  app_id                 :
-  publisher              :
-og_image                 :  
-og_description           :  
-social:
-  type                   : 
-  name                   : 
-  links: 
+og_image                 :
+og_description           :
 
 # Analytics
+# To enable Google Analytics, set provider to "google-analytics-4" and fill in tracking_id.
 analytics:
-  provider               :  "google-gtag" 
+  provider               : false
   google:
-    tracking_id          : ""
+    tracking_id          :
 
 # Reading Files
 include:
-  - .htaccess
   - _pages
-  - files
 exclude:
-  - "*.sublime-project"
-  - "*.sublime-workspace"
-  - .asset-cache
-  - .bundle
   - .github
-  - .jekyll-assets-cache
+  - .jekyll-cache
   - .sass-cache
-  - assets/js/_main.js
-  - assets/js/plugins
-  - assets/js/vendor
-  - CHANGELOG
-  - Capfile
-  - config
+  - docker-compose.yaml
   - Dockerfile
   - Gemfile
-  - Gruntfile.js
-  - gulpfile.js
+  - Gemfile.lock
   - LICENSE
-  - local
-  - log
-  - node_modules
-  - package.json*
-  - Rakefile
-  - README
-  - tmp
+  - README.md
   - vendor
+  - _config_docker.yml
 keep_files:
   - .git
   - .svn
@@ -206,76 +85,14 @@ kramdown:
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
 
-# These settings control the types of collections used by the template
-collections:
-  teaching:
-    output: true
-    permalink: /:collection/:path/
-  publications:
-    output: true
-    permalink: /:collection/:path/
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
-  talks:
-    output: true
-    permalink: /:collection/:path/
-
-# These settings control how pages and collections are included in the site
+# Every page uses the single layout, which renders inside the default
+# layout (masthead, author sidebar, footer).
 defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
-  # _pages
   - scope:
       path: ""
       type: pages
     values:
       layout: single
-      author_profile: true
-  # _teaching
-  - scope:
-      path: ""
-      type: teaching
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
-  # _publications
-  - scope:
-      path: ""
-      type: publications
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
-  # _portfolio
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comment: true
-  # _talks
-  - scope:
-      path: ""
-      type: talks
-    values:
-      layout: talk
-      author_profile: true
-      share: true
 
 # Sass/SCSS
 sass:
@@ -286,31 +103,15 @@ sass:
 permalink: /:categories/:title/
 timezone: Etc/UTC 
 
-# Plugins
+# Plugins (all supported by GitHub Pages)
 plugins:
-  - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-redirect-from
-  - jemoji
 
 # Mimic GitHub Pages with --safe
 whitelist:
-  - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-redirect-from
-  - jemoji
-
-# Archives
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
 
 # HTML Compression
 compress_html:

@@ -1,351 +1,96 @@
 /* ==========================================================================
-   SIDEBAR
+   SIDEBAR (author profile)
    ========================================================================== */
 
-/*
-   Default
-   ========================================================================== */
+.author {
+  text-align: center;
+  color: var(--global-text-color);
 
-.sidebar {
-  -webkit-transform: translate3d(0, 0 , 0);
-          transform: translate3d(0, 0 , 0);
-
-  @include clearfix();
-  margin-bottom: 1em;
-
-  @media (orientation: portrait) {
-    margin-top: 1em;
-  }
-
-  @media screen and (min-width: $sidebar-screen-min-width) {
-    
-                // Add scrollbar if the sidebar is too long
-    position: fixed;
-    padding-top: $masthead-height;
-  }
-
-  @include breakpoint($large) {
-    @include span(2 of 12);
-    opacity: 1;
-    -webkit-transition: opacity 0.2s ease-in-out;
-            transition: opacity 0.2s ease-in-out;
-
-    &:hover {
-      opacity: 1;
-    }
-  }
-
-  @include breakpoint($x-large) {
-    max-width: $sidebar-link-max-width;
-    padding-right: 0;
-  }
-
-  h2, h3, h4, h5, h6 {
-    margin-bottom: 0;
-    font-family: $sans-serif-narrow;
-  }
-
-  h3, h4 {
-    font-size: $type-size-5;
-  }
-
-  p, li {
-    font-family: $sans-serif;
-    font-size: $type-size-6;
-    line-height: 1.5;
-  }
-
-  img {
-    width: 100%;
-  }
-}
-
-.sidebar__right {
-  margin-bottom: 1em;
-
-  @include breakpoint($large) {
-    position: relative;
-    float: right;
-    width: $right-sidebar-width-narrow;
-    margin-left: span(0.5 of 12);
-    z-index: 10;
-  }
-
-  @include breakpoint($x-large) {
-    width: $right-sidebar-width;
-  }
-}
-
-
-/*
-   Table of contents
-   ========================================================================== */
-
-.toc {
-  background-color: var(--global-toc-bg-color);
-  border: 1px solid var(--global-border-color);
-  border-radius: $border-radius;
-  box-shadow: $box-shadow;
-  padding: 1em;
-
-  .nav__title {
-    color: var(--global-text-color);
-    font-size: $type-size-6;
-    background: transparent;
-    border: 0;
-    padding: 0;
-  }
-
-  .toc__menu {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    list-style: none;
-    font-size: $type-size-6;
-
-    a {
-      display: block;
-      padding: 0.25rem 0;
-      color: var(--global-text-color);
-      font-size: $type-size-7;
-      font-weight: normal;
-      line-height: 1.5;
-      border-bottom: 0;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-
-    > li > a {
-      font-weight: bold;
-    }
-
-    li ul > li a {
-      padding-left: 1rem;
-      font-weight: normal;
-    }
-
-    li ul li ul > li a {
-      padding-left: 2rem;
-    }
-
-    li ul li ul li ul > li a {
-      padding-left: 3rem;
-    }
-  }
-}
-
-/*
-   Author profile and links
-   ========================================================================== */
-
-.author__avatar {
-  display: table-cell;
-  vertical-align: top;
-  width: 20px;
-
-  @include breakpoint($large) {
+  &__avatar img {
     display: block;
-    width: auto;
-    height: auto;
-  }
-
-  img {
-    max-width: 400px;
-    /* ৫-এর পরিবর্তে ২০-২৫% দিলে এটি দ্বিতীয় ছবির মতো 'Squircle' শেপ নেবে */
-    border-radius: 14%; 
-    /* ছবির নিচে একটি সুন্দর সফট শ্যাডো যোগ করা হয়েছে */
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    width: 100%;
+    max-width: 230px;
+    height: 300px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 50% 12%;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
     transition: transform 0.3s ease;
 
-    @include breakpoint($large) {
-      /* বর্ডার এবং প্যাডিং সরিয়ে ফেললে ছবিটি আরও প্রফেশনাল দেখাবে */
-      padding: 0;
-      border: none;
-    }
-
     &:hover {
-      /* মাউস হোভার করলে ছবিটি সামান্য উপরে উঠবে */
-      transform: translateY(-5px);
-    }
-  }
-}
-
-.author__content {
-  display: table-cell;
-  vertical-align: top;
-  padding-left: 15px;
-  padding-right: 25px;
-  line-height: 1;
-
-  @include breakpoint($large) {
-    display: block;
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
-.author__name {
-  margin: 0;
-
-  @include breakpoint($large) {
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-}
-.sidebar .author__name {
-  font-family: $sans-serif;
-  font-size: $type-size-5;
-}
-
-.sidebar .author__desktop {
-  display: none;
-  @media screen and (min-width: 1024px) {
-    display: block;
-  }
-}
-
-.author__pronouns {
-  margin: 0;
-
-  @include breakpoint($large) {
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-}
-
-.author__bio {
-  margin: 0;
-
-  @include breakpoint($large) {
-    margin-top: 10px;
-    margin-bottom: 20px;
-  }
-}
-
-.author__urls-wrapper {
-  position: relative;
-  display: table-cell;
-  vertical-align: middle;
-  font-family: $sans-serif;
-  z-index: 10;
-  position: relative;
-  cursor: pointer;
-
-  li:last-child {
-    a {
-      margin-bottom: 0;
+      transform: translateY(-4px);
     }
   }
 
-  @include breakpoint($large) {
-    display: block;
+  &__content {
+    margin-bottom: 25px;
   }
 
-  button {
-    margin-bottom: 0;
-
-    @include breakpoint($large) {
-      display: none;
-    }
-  }
-}
-
-.author__urls {
-  display: none;
-  position: absolute;
-  right: 0;
-  margin-top: 15px;
-  padding: 10px;
-  list-style-type: none;
-  border: 1px solid var(--global-border-color);
-  border-radius: $border-radius;
-  background: var(--global-bg-color);
-  z-index: -1;
-  box-shadow: 0 0 10px rgba(#000, 0.25);
-  cursor: default;
-
-  @include breakpoint($large) {
-    display: block;
-    position: relative;
+  &__name {
     margin: 0;
-    padding: 0;
-    border: 0;
-    background: transparent;
-    box-shadow: none;
+    color: var(--global-primary-color);
+    font-size: 1.1em;
+    font-weight: 700;
+    text-transform: uppercase;
   }
 
-  &:before {
-    display: block;
-    content: "";
-    position: absolute;
-    top: -11px;
-    left: calc(50% - 10px);
-    width: 0;
-    border-style: solid;
-    border-width: 0 10px 10px;
-    border-color: var(--global-border-color) transparent;
-    z-index: 0;
-
-    @include breakpoint($large) {
-      display: none;
-    }
+  &__description {
+    margin: 5px 0 0;
+    color: #666;
+    font-size: 0.7em;
+    font-weight: 500;
+    line-height: 1.3;
   }
 
-  &:after {
-    display: block;
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: calc(50% - 10px);
-    width: 0;
-    border-style: solid;
-    border-width: 0 10px 10px;
-    border-color: #fff transparent;
-    z-index: 1;
-
-    @include breakpoint($large) {
-      display: none;
-    }
+  &__links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
   }
 
-  li {
-    white-space: nowrap;
+  &__icon {
+    display: inline-block;
+    font-size: 1.3em;
+    color: var(--global-text-color-light);
+    transition: all 0.3s ease;
+
+    &:hover { transform: translateY(-3px); }
+    &--email:hover { color: #d93025; }
+    &--scholar:hover { color: #4285f4; }
+    &--github:hover { color: #333; }
+    &--linkedin:hover { color: #0077b5; }
+    &--orcid:hover { color: #a6ce39; }
   }
 
-  a {
-    display: block;
-    margin-bottom: 5px;
-    padding-right: 5px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    color: inherit;
-    font-size: $type-size-5;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
+  &__cv {
+    padding-top: 20px;
+    border-top: 1px solid var(--global-border-color);
   }
 }
 
-/* Aggressively widen the main content layout */
-.initial-content, 
-.page__inner-wrap {
-  max-width: 100% !important;
-}
+.cv-button {
+  display: inline-block;
+  padding: 8px 20px;
+  border: 1px solid var(--global-primary-color);
+  border-radius: $border-radius;
+  color: var(--global-primary-color);
+  font-size: 0.85em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: all 0.3s ease;
 
-.page {
-  width: 90% !important; /* Tells the main content to take up 75% of the screen, leaving 25% for the sidebar */
-  padding-right: 20px !important;
-}
+  &:hover {
+    background-color: var(--global-primary-color);
+    color: #fff;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(44, 62, 80, 0.15);
+  }
 
-/* Kill the old float behavior */
-.sidebar {
-  width: auto !important;
-  float: none !important;
-  position: static !important;
+  i {
+    margin-right: 6px;
+  }
 }
-

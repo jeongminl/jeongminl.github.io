@@ -1,16 +1,12 @@
 ---
-layout: archive
 title: "CV"
 permalink: /cv/
-author_profile: true
 redirect_from:
   - /resume
 ---
 
-{% include base_path %}
-
 Education
-======
+------
 * **B.S. in Computer Science**, Korea Advanced Institute of Science and Technology (KAIST), 2021 – Present
   * GPA: 4.17 / 4.3 (Current)
   * Relevant Coursework: Systems Programming, Computer Organization, Operating Systems, Introduction to Artificial Intelligence, Machine Learning Basics and Applications.
@@ -21,7 +17,7 @@ Education
   * IB Score: 45 / 45
 
 Research & Work Experience
-======
+------
 * **Undergraduate Researcher**, ARC Lab, Seoul National University, Jun 2026 – Present
   * Developed a lifetime-informed KV cache routing mechanism to reduce flash wear on High Bandwidth Flash when used in heterogeneous memory systems, extending flash lifetime by up to 3x in Agentic AI serving scenarios.
   * Implemented an Agentic AI serving simulator and various KV cache routing mechanisms used for evaluation.
@@ -43,7 +39,7 @@ Research & Work Experience
   * Developed and implemented SIGINT algorithms.
 
 Awards & Scholarships
-======
+------
 * **IPESK Next-Generation Engineer**, South Korea, 2026
   * Awarded to top students in nationwide research universities.
 * **National Science & Technology Scholarship**, South Korea, 2025
@@ -60,13 +56,13 @@ Awards & Scholarships
   * National Infocomm Competition.
 
 Skills
-======
+------
 * **Programming Languages**: Python, C/C++, Rust, Verilog/SystemVerilog, Scala, Java
 * **Machine Learning Frameworks**: PyTorch, TensorFlow
 * **Design Tools**: Vivado
 * **Natural Languages**: English (Native), Korean (Native), Spanish (Limited), Chinese (Limited)
 
 Publications
-======
+------
 * **Yang, Jaehoon, Jeongmin Lee, Haneul Park, Seung Yul Lee, Nam Sung Kim, and Jae W. Lee (2026).** "Lachesis: Lifetime-Aware KV Cache Placement for Agent Serving across HBM and High-Bandwidth Flash". *In Submission*.
 * **Kim, Yeseung, Gyungjin Eo, Jisang Park, Jeongmin Lee, Jun Park, and Daehyung Park (2026).** "ForeSight: Reactive Long-Horizon Task Execution with Autoregressive Planning and Monitoring". *In Submission*.

@@ -2,11 +2,13 @@
    STYLE RESETS
    ========================================================================== */
 
-@include border-box-sizing;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 html {
-  /* apply a natural box layout model to all elements */
-  box-sizing: border-box;
   background-color: var(--global-bg-color);
   font-size: 16px;
 

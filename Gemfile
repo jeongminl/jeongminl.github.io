@@ -1,15 +1,12 @@
 source 'https://rubygems.org'
 
-# Use the newest, bug-free versions of Jekyll
+# Local preview only: GitHub Pages builds the live site with its own pinned
+# Jekyll 3.x toolchain and ignores this file.
 gem 'jekyll'
 
-# Core plugins required by your _config.yml
-gem 'jekyll-paginate'
-gem 'jekyll-gist'
-gem 'jekyll-feed'
+# Plugins listed in _config.yml
 gem 'jekyll-sitemap'
 gem 'jekyll-redirect-from'
-gem 'jemoji'
 
 # The missing legacy packages for Ruby 3.4+
 gem 'csv'

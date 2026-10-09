@@ -1,218 +1,21 @@
 ---
-layout: single
 title: "EXPERIENCE"
 permalink: /experience/
-author_profile: false
 ---
-
-<style>
-  /* =========================================
-     1. STATIC LIGHT THEME VARIABLES (Locked)
-     ========================================= */
-  :root {
-    --port-primary: #2c3e50;    /* Dark Academic Blue */
-    --port-text: #3b3b3b;       /* Dark Gray for readability */
-    --port-muted: #64748b;      /* Muted gray for subtitles */
-    --port-bg: #fdfdfd;         /* Almost white for cards */
-    --port-border: #eaeaea;     /* Light gray borders */
-    --accent-color: #f0f7ff;    /* Soft blue for milestones */
-  }
-
-  /* =========================================
-     2. GLOBAL HEADER FIXES
-     ========================================= */
-  .masthead, 
-  .masthead__inner-wrap, 
-  .masthead__menu, 
-  .masthead__menu ul, 
-  .greedy-nav {
-    background-color: #ffffff !important;
-    background: #ffffff !important;
-  }
-  
-  .masthead {
-    border-bottom: 1px solid var(--port-border) !important;
-  }
-
-  .masthead a, 
-  .masthead__menu-item,
-  .masthead__menu-item a,
-  .greedy-nav a, 
-  .greedy-nav .visible-links,
-  .greedy-nav .visible-links li,
-  .greedy-nav .visible-links a {
-    background-color: transparent !important;
-    background: transparent !important;
-    color: var(--port-text) !important;
-  }
-
-  .masthead a:hover,
-  .greedy-nav a:hover,
-  .greedy-nav .visible-links a:hover,
-  .greedy-nav .visible-links li.masthead__menu-item--current a,
-  .greedy-nav .visible-links li.masthead__menu-item--current a:hover {
-    background-color: transparent !important;
-    background: transparent !important;
-    color: var(--port-primary) !important;
-  }
-
-  h1.page__title, .page__title {
-    color: var(--port-primary) !important;
-    font-weight: 700 !important;
-  }
-
-  /* =========================================
-     3. SECTION STYLING
-     ========================================= */
-  .section-title {
-    margin-top: 40px; 
-    border-bottom: 1px solid var(--port-border); 
-    padding-bottom: 8px; 
-    text-transform: uppercase; 
-    color: var(--port-primary) !important;
-    font-size: 1.15em !important; 
-    letter-spacing: 0.1em;
-    font-weight: 700;
-  }
-
-  .timeline-container {
-    margin-top: 20px;
-    padding-right: 0;
-  }
-
-  .timeline-item {
-    display: flex; 
-    margin-bottom: 22px; 
-    font-size: 0.9em; 
-    line-height: 1.6;
-    padding: 4px 0;
-    align-items: baseline; 
-  }
-  
-  .timeline-date {
-    min-width: 140px; 
-    font-weight: 700; 
-    color: var(--port-muted); 
-    flex-shrink: 0;
-  }
-  
-  .timeline-content {
-    flex: 1; 
-    color: var(--port-text);
-    word-wrap: break-word;
-  }
-
-  .experience-desc {
-    margin-top: 6px;
-    margin-bottom: 0;
-    padding-left: 18px;
-    list-style-type: disc;
-    color: var(--port-text);
-  }
-
-  .experience-desc li {
-    margin-bottom: 4px;
-    line-height: 1.55;
-    text-align: justify;
-    text-justify: inter-word;
-  }
-
-  /* Technical Skills Grid */
-  .skills-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    margin-top: 20px;
-    margin-bottom: 40px;
-  }
-
-  .skill-category h3 {
-    font-size: 0.85em;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--port-muted) !important;
-    margin-bottom: 12px;
-    border-bottom: 1px solid var(--port-border);
-    padding-bottom: 5px;
-    font-weight: 600;
-  }
-
-  .badge-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  .skill-badge {
-    display: flex;
-    align-items: center;
-    background-color: var(--port-bg) !important;
-    border: 1px solid var(--port-border) !important;
-    padding: 5px 12px;
-    border-radius: 4px;
-    font-size: 0.82em;
-    color: var(--port-text) !important;
-    font-weight: 500;
-    transition: all 0.3s ease;
-  }
-
-  .skill-badge img,
-  .skill-badge i {
-    width: 18px;
-    height: 18px;
-    margin-right: 10px;
-    object-fit: contain;
-    filter: grayscale(100%) opacity(70%) !important;
-    transition: all 0.3s ease;
-  }
-
-  .skill-badge:hover {
-    transform: translateY(-2px);
-    border-color: var(--port-primary) !important;
-    color: var(--port-primary) !important;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  .skill-badge:hover img,
-  .skill-badge:hover i {
-    filter: grayscale(0%) opacity(100%) !important;
-    color: var(--port-primary) !important;
-  }
-
-  /* Responsive Adjustments */
-  @media (max-width: 850px) {
-    .skills-grid {
-      grid-template-columns: 1fr;
-      gap: 20px;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .timeline-item { 
-      flex-direction: column; 
-      margin-bottom: 20px;
-    }
-    .timeline-date { 
-      margin-bottom: 4px; 
-      font-size: 0.85em; 
-      color: var(--port-primary);
-    }
-  }
-</style>
 
 <!-- =========================================
      EDUCATION SECTION
      ========================================= -->
-<h2 class="section-title" style="margin-top: 10px;">Education</h2>
+<h2 class="section-title">Education</h2>
 
-<div class="timeline-container">
+<div class="timeline-container timeline-container--wide">
 
   <div class="timeline-item">
     <div class="timeline-date">2021 – Present</div>
     <div class="timeline-content">
       <strong>B.S. in Computer Science</strong> — Korea Advanced Institute of Science and Technology (KAIST), Daejeon, South Korea<br>
-      <span style="color: var(--port-muted); font-size: 0.9em;">GPA: 4.17 / 4.30 (Current)</span><br>
-      <span style="color: var(--port-muted); font-size: 0.85em;">Relevant Coursework: Systems Programming, Computer Organization, Operating Systems, Introduction to Artificial Intelligence, Machine Learning Basics and Applications.</span>
+      <span class="timeline-meta">GPA: 4.17 / 4.30 (Current)</span><br>
+      <span class="timeline-note">Relevant Coursework: Systems Programming, Computer Organization, Operating Systems, Introduction to Artificial Intelligence, Machine Learning Basics and Applications.</span>
     </div>
   </div>
 
@@ -220,8 +23,8 @@ author_profile: false
     <div class="timeline-date">2026</div>
     <div class="timeline-content">
       <strong>Exchange Programme</strong> — University of California, Santa Cruz, California, USA<br>
-      <span style="color: var(--port-muted); font-size: 0.9em;">GPA: 4.0 / 4.0</span><br>
-      <span style="color: var(--port-muted); font-size: 0.85em;">Relevant Coursework: Logic Design, Parallel and Concurrent Programming, Compiler Design, Embedded System Design.</span>
+      <span class="timeline-meta">GPA: 4.0 / 4.0</span><br>
+      <span class="timeline-note">Relevant Coursework: Logic Design, Parallel and Concurrent Programming, Compiler Design, Embedded System Design.</span>
     </div>
   </div>
 
@@ -229,7 +32,7 @@ author_profile: false
     <div class="timeline-date">2015 – 2020</div>
     <div class="timeline-content">
       <strong>Anglo-Chinese School (Independent)</strong> — Singapore<br>
-      <span style="color: var(--port-muted); font-size: 0.9em;">International Baccalaureate Score: 45 / 45</span>
+      <span class="timeline-meta">International Baccalaureate Score: 45 / 45</span>
     </div>
   </div>
 
@@ -240,13 +43,13 @@ author_profile: false
      ========================================= -->
 <h2 class="section-title">Experiences</h2>
 
-<div class="timeline-container">
+<div class="timeline-container timeline-container--wide">
 
   <div class="timeline-item">
     <div class="timeline-date">Jun 2026 – Present</div>
     <div class="timeline-content">
       <strong>Undergraduate Researcher</strong> — ARC Lab, Seoul National University<br>
-      <span style="color: var(--port-muted); font-size: 0.9em;">Advisor: Prof. Jae W. Lee</span>
+      <span class="timeline-meta">Advisor: Prof. Jae W. Lee</span>
       <ul class="experience-desc">
         <li>Developed a lifetime-informed KV cache routing mechanism to reduce flash wear on High Bandwidth Flash when used in heterogeneous memory systems, extending flash lifetime by up to 3x in Agentic AI serving scenarios.</li>
         <li>Implemented an Agentic AI serving simulator and various KV cache routing mechanisms used for evaluation.</li>
@@ -258,7 +61,7 @@ author_profile: false
     <div class="timeline-date">Jan 2026 – Jun 2026</div>
     <div class="timeline-content">
       <strong>Undergraduate Researcher</strong> — Litz Lab, UC Santa Cruz<br>
-      <span style="color: var(--port-muted); font-size: 0.9em;">Advisor: Prof. Heiner Litz</span>
+      <span class="timeline-meta">Advisor: Prof. Heiner Litz</span>
       <ul class="experience-desc">
         <li>Implemented a module in SystemVerilog to measure bandwidth, latency, etc. of a novel STTRAM module installed on a BittWare FPGA.</li>
         <li>Implemented STTRAM exposure to user space through PCIe via MMIO and DMA.</li>
@@ -320,7 +123,7 @@ author_profile: false
       </div>
     </div>
 
-    <div class="skill-category" style="margin-top: 20px;">
+    <div class="skill-category">
       <h3>Design & Hardware Tools</h3>
       <div class="badge-container">
         <div class="skill-badge"><i class="fas fa-memory"></i> Vivado</div>
@@ -337,7 +140,7 @@ author_profile: false
       </div>
     </div>
 
-    <div class="skill-category" style="margin-top: 20px;">
+    <div class="skill-category">
       <h3>Spoken Languages</h3>
       <div class="badge-container">
         <div class="skill-badge"><i class="fas fa-language"></i> English (Native)</div>
