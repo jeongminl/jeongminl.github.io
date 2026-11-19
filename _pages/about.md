@@ -29,7 +29,6 @@ redirect_from:
   <span class="pill">Computer Architecture</span>
   <span class="pill">Accelerator Architecture</span>
   <span class="pill">Memory Systems</span>
-  <span class="pill">ML &amp; Robotics Workloads</span>
   {% comment %}<span class="pill">Systems for ML</span>
   <span class="pill">Heterogeneous Memory</span>{% endcomment %}
 </div>
