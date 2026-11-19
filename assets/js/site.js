@@ -71,18 +71,49 @@
 })();
 
 /* ==========================================================================
-   Publications: toggle the venue and summary boxes under each paper
+   Publications: toggle the venue and summary boxes under each paper.
+   Opening one box closes the other box of the same paper.
    ========================================================================== */
 
 document.querySelectorAll(".pub-list .meta-btn[data-toggle]").forEach(function (btn) {
+  var item = btn.closest("li");
+  var target = item && item.querySelector(".info-box--" + btn.dataset.toggle);
+  if (!target) {
+    btn.disabled = true;
+    return;
+  }
+
   btn.addEventListener("click", function () {
-    var item = btn.closest("li");
-    var target = item.querySelector(".info-box--" + btn.dataset.toggle);
-    var wasOpen = target.classList.contains("open");
+    var open = !target.classList.contains("open");
 
     item.querySelectorAll(".info-box").forEach(function (box) {
       box.classList.remove("open");
     });
-    target.classList.toggle("open", !wasOpen);
+    item.querySelectorAll(".meta-btn[data-toggle]").forEach(function (b) {
+      b.setAttribute("aria-expanded", "false");
+    });
+
+    target.classList.toggle("open", open);
+    btn.setAttribute("aria-expanded", String(open));
   });
 });
+
+/* ==========================================================================
+   Footer "Last Updated": show the date of the latest commit to the site's
+   repository. The build date rendered by Jekyll stays as the fallback.
+   ========================================================================== */
+
+(function () {
+  var el = document.getElementById("last-updated");
+  if (!el || !el.dataset.repo || !window.fetch) return;
+
+  fetch("https://api.github.com/repos/" + el.dataset.repo + "/commits?per_page=1")
+    .then(function (res) { return res.ok ? res.json() : null; })
+    .then(function (commits) {
+      var date = commits && commits[0] && new Date(commits[0].commit.committer.date);
+      if (!date || isNaN(date)) return;
+      el.setAttribute("datetime", date.toISOString());
+      el.textContent = date.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+    })
+    .catch(function () {});
+})();

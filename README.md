@@ -6,7 +6,8 @@ Source for Jeongmin Lee's academic website, served at <https://jeongminl.github.
 
 | Path | What it is |
 | --- | --- |
-| `_pages/` | One file per page: About (`about.md`, the home page), Experience, Publications, Awards & Honors, CV |
+| `_pages/` | One file per page: About (`about.md`, the home page), Experience, Publications, Awards & Honors; `cv.md` just redirects `/cv/` to the PDF |
+| `_data/cv.yml` | Education, experience, talks, publications, awards and skills; the Experience, Publications and Awards pages are generated from it |
 | `_data/navigation.yml` | Links shown in the masthead |
 | `_config.yml` | Site settings, including the author details shown in the sidebar |
 | `_layouts/default.html` | Page shell: masthead, author sidebar, content, footer |
@@ -16,7 +17,9 @@ Source for Jeongmin Lee's academic website, served at <https://jeongminl.github.
 | `assets/js/site.js` | Masthead overflow menu, back-to-top button, publication toggles |
 | `files/cv.pdf` | The CV linked from the sidebar |
 
-To update the CV, replace `files/cv.pdf` and keep `_pages/cv.md` in sync with it.
+To update the CV, replace `files/cv.pdf` and keep `_data/cv.yml` in sync with it.
+
+The footer's "Last Updated" date is the date of the latest commit, fetched from the GitHub API in the browser; if that request fails it falls back to the build date.
 
 ## Local preview
 

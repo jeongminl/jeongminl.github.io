@@ -2,17 +2,17 @@
   <div class="site-footer__inner">
     <div class="site-footer__left">
       &copy; {{ site.time | date: "%Y" }} <strong>{{ site.author.name }}</strong><br>
-      <span class="site-footer__meta">Last Updated: {{ site.time | date: "%B %d, %Y" }}</span>
+      <span class="site-footer__meta">Last Updated: <time id="last-updated" datetime="{{ site.time | date_to_xmlschema }}"{% if site.repository %} data-repo="{{ site.repository }}"{% endif %}>{{ site.time | date: "%B %d, %Y" }}</time></span>
     </div>
 
     <div class="site-footer__right">
       <a href="https://github.com/{{ site.repository }}" target="_blank" rel="noopener" class="site-footer__source">
-        Source <i class="fas fa-paper-plane"></i>
+        Source <i class="fas fa-paper-plane" aria-hidden="true"></i>
       </a>
     </div>
   </div>
 </footer>
 
 <button id="scroll-to-top" class="scroll-to-top" type="button" title="Go to top" aria-label="Go to top">
-  <i class="fas fa-chevron-up"></i>
+  <i class="fas fa-chevron-up" aria-hidden="true"></i>
 </button>

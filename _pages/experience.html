@@ -1,153 +1,77 @@
 ---
-title: "EXPERIENCE"
+title: "Experience"
 permalink: /experience/
 ---
+{% assign cv = site.data.cv %}
 
-<!-- =========================================
-     EDUCATION SECTION
-     ========================================= -->
 <h2 class="section-title">Education</h2>
-
 <div class="timeline-container timeline-container--wide">
-
+  {% for e in cv.education %}
   <div class="timeline-item">
-    <div class="timeline-date">2021 – Present</div>
+    <div class="timeline-date">{{ e.date }}</div>
     <div class="timeline-content">
-      <strong>B.S. in Computer Science</strong> — Korea Advanced Institute of Science and Technology (KAIST), Daejeon, South Korea<br>
-      <span class="timeline-meta">GPA: 4.17 / 4.30 (Current)</span><br>
-      <span class="timeline-note">Relevant Coursework: Systems Programming, Computer Organization, Operating Systems, Introduction to Artificial Intelligence, Machine Learning Basics and Applications.</span>
+      <strong>{{ e.degree }}</strong> — {{ e.school }}, {{ e.location }}<br>
+      <span class="timeline-meta">{{ e.meta }}</span>
+      {% for n in e.notes %}<br><span class="timeline-note">{{ n }}</span>{% endfor %}
     </div>
   </div>
-
-  <div class="timeline-item">
-    <div class="timeline-date">2026</div>
-    <div class="timeline-content">
-      <strong>Exchange Programme</strong> — University of California, Santa Cruz, California, USA<br>
-      <span class="timeline-meta">GPA: 4.0 / 4.0</span><br>
-      <span class="timeline-note">Relevant Coursework: Logic Design, Parallel and Concurrent Programming, Compiler Design, Embedded System Design.</span>
-    </div>
-  </div>
-
-  <div class="timeline-item">
-    <div class="timeline-date">2015 – 2020</div>
-    <div class="timeline-content">
-      <strong>Anglo-Chinese School (Independent)</strong> — Singapore<br>
-      <span class="timeline-meta">International Baccalaureate Score: 45 / 45</span>
-    </div>
-  </div>
-
+  {% endfor %}
 </div>
 
-<!-- =========================================
-     WORK & RESEARCH EXPERIENCES SECTION
-     ========================================= -->
-<h2 class="section-title">Experiences</h2>
-
+<h2 class="section-title">Research Experience</h2>
 <div class="timeline-container timeline-container--wide">
-
+  {% for x in cv.research %}
   <div class="timeline-item">
-    <div class="timeline-date">Jun 2026 – Present</div>
+    <div class="timeline-date">{{ x.date }}</div>
     <div class="timeline-content">
-      <strong>Undergraduate Researcher</strong> — ARC Lab, Seoul National University<br>
-      <span class="timeline-meta">Advisor: Prof. Jae W. Lee</span>
+      <strong>{{ x.role }}</strong> — {{ x.org }}
+      {% if x.meta %}<br><span class="timeline-meta">{{ x.meta }}</span>{% endif %}
       <ul class="experience-desc">
-        <li>Developed a lifetime-informed KV cache routing mechanism to reduce flash wear on High Bandwidth Flash when used in heterogeneous memory systems, extending flash lifetime by up to 3x in Agentic AI serving scenarios.</li>
-        <li>Implemented an Agentic AI serving simulator and various KV cache routing mechanisms used for evaluation.</li>
+        {% for b in x.bullets %}<li>{{ b }}</li>{% endfor %}
       </ul>
     </div>
   </div>
-
-  <div class="timeline-item">
-    <div class="timeline-date">Jan 2026 – Jun 2026</div>
-    <div class="timeline-content">
-      <strong>Undergraduate Researcher</strong> — Litz Lab, UC Santa Cruz<br>
-      <span class="timeline-meta">Advisor: Prof. Heiner Litz</span>
-      <ul class="experience-desc">
-        <li>Implemented a module in SystemVerilog to measure bandwidth, latency, etc. of a novel STTRAM module installed on a BittWare FPGA.</li>
-        <li>Implemented STTRAM exposure to user space through PCIe via MMIO and DMA.</li>
-        <li>Investigated potential vulnerabilities and other characteristics of the STTRAM module, presenting findings in the annual CRSS Industrial Advisory Board Meeting.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="timeline-item">
-    <div class="timeline-date">Jul 2025 – Dec 2025</div>
-    <div class="timeline-content">
-      <strong>Undergraduate Researcher</strong> — VIA Group, KAIST
-      <ul class="experience-desc">
-        <li>Implemented a cycle-level simulator in C++ for a sparse CNN accelerator, simulating its speedups against a naive computation approach.</li>
-        <li>Implemented a runtime memory manager in C++ and CUDA to decrease total memory requirement of DNNs by appropriately offloading data from GPU memory to CPU memory.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="timeline-item">
-    <div class="timeline-date">Feb 2025 – Jul 2025</div>
-    <div class="timeline-content">
-      <strong>Undergraduate Researcher</strong> — RIRO Lab, KAIST
-      <ul class="experience-desc">
-        <li>Developed a long-term horizon planning and replanning robotics module with 50+% replanning success rate when faced with action execution disruptions.</li>
-        <li>Implemented multiple robotic planning and replanning baselines, including CAPE, ISRLLM, Inner-Monologue, ProgPrompt, Text2Reaction, DoReMi, and Zero-Shot Planner, for deployment in the AI2THOR simulator.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="timeline-item">
-    <div class="timeline-date">Jul 2023 – Jan 2025</div>
-    <div class="timeline-content">
-      <strong>Analyst</strong> — Defense Security Agency
-      <ul class="experience-desc">
-        <li>Developed and implemented SIGINT algorithms.</li>
-      </ul>
-    </div>
-  </div>
-
+  {% endfor %}
 </div>
 
-<!-- =========================================
-     TECHNICAL SKILLS SECTION
-     ========================================= -->
+<h2 class="section-title">Talks</h2>
+<div class="timeline-container timeline-container--wide">
+  {% for t in cv.talks %}
+  <div class="timeline-item">
+    <div class="timeline-date">{{ t.date }}</div>
+    <div class="timeline-content">“{{ t.title }}” — {{ t.venue }}</div>
+  </div>
+  {% endfor %}
+</div>
+
+<h2 class="section-title">Other Experience</h2>
+<div class="timeline-container timeline-container--wide">
+  {% for x in cv.other %}
+  <div class="timeline-item">
+    <div class="timeline-date">{{ x.date }}</div>
+    <div class="timeline-content">
+      <strong>{{ x.role }}</strong> — {{ x.org }}
+      <ul class="experience-desc">
+        {% for b in x.bullets %}<li>{{ b }}</li>{% endfor %}
+      </ul>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
 <h2 class="section-title">Technical Skills</h2>
-
 <div class="skills-grid">
-  <div>
-    <div class="skill-category">
-      <h3>Programming Languages</h3>
-      <div class="badge-container">
-        <div class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"> Python</div>
-        <div class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C/C++"> C/C++</div>
-        <div class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-original.svg" alt="Rust"> Rust</div>
-        <div class="skill-badge"><i class="fas fa-microchip"></i> Verilog / SystemVerilog</div>
-        <div class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scala/scala-original.svg" alt="Scala"> Scala</div>
-        <div class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"> Java</div>
+  {% for s in cv.skills %}
+  <div class="skill-category">
+    <h3>{{ s.category }}</h3>
+    <div class="badge-container">
+      {% for i in s.items %}
+      <div class="skill-badge">
+        {% if i.devicon %}<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/{{ i.devicon }}/{{ i.devicon }}-original.svg" alt="" aria-hidden="true">{% else %}<i class="{{ i.fa }}" aria-hidden="true"></i>{% endif %}
+        {{ i.name }}
       </div>
-    </div>
-
-    <div class="skill-category">
-      <h3>Design & Hardware Tools</h3>
-      <div class="badge-container">
-        <div class="skill-badge"><i class="fas fa-memory"></i> Vivado</div>
-      </div>
+      {% endfor %}
     </div>
   </div>
-
-  <div>
-    <div class="skill-category">
-      <h3>Machine Learning Frameworks</h3>
-      <div class="badge-container">
-        <div class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch"> PyTorch</div>
-        <div class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow"> TensorFlow</div>
-      </div>
-    </div>
-
-    <div class="skill-category">
-      <h3>Spoken Languages</h3>
-      <div class="badge-container">
-        <div class="skill-badge"><i class="fas fa-language"></i> English (Native)</div>
-        <div class="skill-badge"><i class="fas fa-language"></i> Korean (Native)</div>
-        <div class="skill-badge"><i class="fas fa-globe-americas"></i> Spanish (Limited)</div>
-        <div class="skill-badge"><i class="fas fa-globe-asia"></i> Chinese (Limited)</div>
-      </div>
-    </div>
-  </div>
+  {% endfor %}
 </div>

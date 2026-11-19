@@ -1,0 +1,140 @@
+# Single source for the Experience, Publications and Awards pages.
+# Keep in sync with files/cv.pdf. Text fields may contain inline HTML.
+
+education:
+  - date: "2021 – Present"
+    degree: "B.S. in Computer Science"
+    school: "Korea Advanced Institute of Science and Technology (KAIST)"
+    location: "Daejeon, South Korea"
+    meta: "GPA: 4.17 / 4.3 · Expected Graduation: Jun 2027"
+    notes:
+      - "Includes 18 months of mandatory military service (Jul 2023 – Jan 2025)."
+      - "Relevant Coursework: Systems Programming, Computer Organization, Operating Systems, Introduction to Artificial Intelligence, Machine Learning Basics and Applications."
+
+  - date: "2026"
+    degree: "Exchange Program (Jan – Jun 2026)"
+    school: "University of California, Santa Cruz"
+    location: "California, USA"
+    meta: "GPA: 4.0 / 4.0"
+    notes:
+      - "Relevant Coursework: Logic Design, Parallel and Concurrent Programming, Compiler Design, Embedded System Design."
+
+  - date: "2015 – 2020"
+    degree: "International Baccalaureate Diploma"
+    school: "Anglo-Chinese School (Independent)"
+    location: "Singapore"
+    meta: "IB Score: 45 / 45"
+
+research:
+  - date: "Jun 2026 – Present"
+    role: "Undergraduate Researcher"
+    org: "ARC Lab, Seoul National University"
+    meta: "Advisor: Prof. Jae W. Lee"
+    bullets:
+      - "Co-designed Lachesis, a lifetime-aware KV cache placement scheme for agent serving on heterogeneous HBM + High-Bandwidth Flash memory, extending projected flash lifetime by up to 4× over a naive LRU baseline (second author, under review)."
+      - "Extended an open-source LLM-serving simulator with two-tier HBM/HBF timing, flash-wear accounting and KV placement policies; led implementation of the memory allocation scheme."
+      - "Proposed the threshold-based allocation policy adopted in the final design, after finding in preliminary runs that greedily filling HBM left no room for future shorter-lived KV cache."
+      - "Leading the acceleration of GPU kernels used in broad-phase collision detection for robotics simulation, speeding up bounding volume hierarchy tree builds and traversal by 5×."
+
+  - date: "Jan 2026 – Present"
+    role: "Undergraduate Researcher"
+    org: "Litz Lab, UC Santa Cruz"
+    meta: "Advisor: Prof. Heiner Litz · in person Jan – Jun 2026, remote since"
+    bullets:
+      - "Probed row-buffer timing covert channels and disturbance side channels on a novel STTRAM module."
+      - "Built characterization infrastructure on an XUP-P3R FPGA, including a configurable traffic generator with latency-histogram and bandwidth counters, and user-space access via XDMA (MMIO/DMA)."
+      - "Found and fixed bugs in the vendor-provided memory-controller patch, including an ECC correction path that overwrote corrected data with another cache line’s contents."
+
+  - date: "Jul 2025 – Dec 2025"
+    role: "Undergraduate Researcher"
+    org: "VIA Group, KAIST"
+    meta: "Advisor: Prof. Minsoo Rhu"
+    bullets:
+      - "Reproduced SCNN (ISCA ’17), a sparse CNN accelerator, as a cycle-level C++ simulator and evaluated its speedup over dense computation."
+      - "Reimplemented vDNN (MICRO ’16) in C++ and CUDA: a runtime memory manager that overlaps GPU-to-CPU offloading and prefetching with computation to reduce GPU memory usage during DNN training."
+
+  - date: "Feb 2025 – Jul 2025"
+    role: "Undergraduate Researcher"
+    org: "RIRO Lab, KAIST"
+    meta: "Advisor: Prof. Daehyung Park"
+    bullets:
+      - "Developed a long-horizon planning and replanning module for ForeSight (under review), reaching 70+% replanning success under action-execution disruptions vs. 50% for the strongest baseline."
+      - "Implemented seven LLM-based planning and replanning baselines (e.g., ProgPrompt, Inner Monologue, DoReMi) in the AI2-THOR simulator."
+
+talks:
+  - date: "2026"
+    title: "STTRAM Optimizations"
+    venue: "CRSS Industrial Advisory Board Meeting, UC Santa Cruz"
+
+other:
+  - date: "Jul 2023 – Jan 2025"
+    role: "Analyst (Mandatory Military Service)"
+    org: "Defense Security Agency"
+    bullets:
+      - "Developed and implemented SIGINT algorithms."
+
+publications:
+  - section: "Under Review"
+    items:
+      - title: "Lachesis: Lifetime-Aware KV Cache Placement for Agent Serving across HBM and High-Bandwidth Flash"
+        authors: "Jaehoon Yang, Jeongmin Lee, Haneul Park, Seung Yul Lee, Nam Sung Kim, and Jae W. Lee"
+        year: 2026
+        venue: "Under Review"
+        venue_short: "Under Review '26"
+        links:
+          - label: "arXiv"
+            url: "https://arxiv.org/abs/2610.08378"
+        summary: "A lifetime-aware KV cache placement scheme for agent serving on heterogeneous HBM + High-Bandwidth Flash memory, extending projected flash lifetime by up to 4× over a naive LRU baseline."
+
+      - title: "ForeSight: Reactive Long-Horizon Task Execution with Autoregressive Planning and Monitoring"
+        authors: "Yeseung Kim, Gyungjin Eo, Jisang Park, Jeongmin Lee, Jun Park, and Daehyung Park"
+        year: 2026
+        venue: "Under Review"
+        venue_short: "Under Review '26"
+        summary: "Reactive long-horizon task execution through autoregressive planning and continuous monitoring, reaching 70+% replanning success under action-execution disruptions vs. 50% for the strongest baseline."
+
+awards:
+  - year: "2026"
+    title: "IPESK Next-Generation Engineer"
+    region: "South Korea"
+    note: "Awarded to top undergraduate students at research universities nationwide."
+  - year: "2025"
+    title: "National Science &amp; Technology Scholarship"
+    region: "South Korea"
+    note: "Awarded to top engineering and science students nationwide."
+  - year: "2025"
+    title: "Department Honors Scholarship (Valedictorian)"
+    region: "KAIST"
+    note: "Awarded each semester to the top student in each department."
+  - year: "2025"
+    title: "Dean’s List, School of Computing"
+    region: "KAIST"
+    note: "Awarded each semester to the top 3% of students in the School of Computing."
+  - year: "2020"
+    title: "Outstanding Award, International Mathematical Modelling Challenge"
+    region: "International"
+    note: "Highest award, given to the top 2 of 54 teams worldwide."
+
+# icon: a devicon name (devicon/icons/<name>/<name>-original.svg) or fa: Font Awesome classes
+skills:
+  - category: "Programming"
+    items:
+      - { name: "C/C++", devicon: "cplusplus" }
+      - { name: "CUDA", fa: "fas fa-bolt" }
+      - { name: "Python", devicon: "python" }
+      - { name: "Verilog / SystemVerilog", fa: "fas fa-microchip" }
+      - { name: "Rust", devicon: "rust" }
+      - { name: "Scala", devicon: "scala" }
+      - { name: "Java", devicon: "java" }
+  - category: "Tools"
+    items:
+      - { name: "Xilinx Vivado (XDMA, MIG)", fa: "fas fa-memory" }
+      - { name: "FPGA", fa: "fas fa-microchip" }
+      - { name: "Nsight Compute", fa: "fas fa-gauge-high" }
+      - { name: "PyTorch", devicon: "pytorch" }
+  - category: "Languages"
+    items:
+      - { name: "English (Native)", fa: "fas fa-language" }
+      - { name: "Korean (Native)", fa: "fas fa-language" }
+      - { name: "Spanish (Limited)", fa: "fas fa-globe-americas" }
+      - { name: "Chinese (Limited)", fa: "fas fa-globe-asia" }

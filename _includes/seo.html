@@ -1,6 +1,6 @@
 {% include base_path %}
 
-{% if page.title %}
+{% if page.title and page.title != site.title %}
   {% assign seo_title = page.title | append: " " | append: site.title_separator | append: " " | append: site.title | strip_html | escape_once %}
 {% endif %}
 {% assign seo_description = page.description | default: site.description | strip_html | strip_newlines | escape_once %}
@@ -25,16 +25,19 @@
   <meta name="twitter:card" content="summary">
 {% endif %}
 
+{% assign same_as = "" %}
+{% if site.author.googlescholar %}{% assign same_as = same_as | append: "|https://scholar.google.com/citations?user=" | append: site.author.googlescholar %}{% endif %}
+{% if site.author.github %}{% assign same_as = same_as | append: "|https://github.com/" | append: site.author.github %}{% endif %}
+{% if site.author.linkedin %}{% assign same_as = same_as | append: "|https://www.linkedin.com/in/" | append: site.author.linkedin %}{% endif %}
+{% if site.author.orcid %}{% assign same_as = same_as | append: "|https://orcid.org/" | append: site.author.orcid %}{% endif %}
+
 <script type="application/ld+json">
   {
     "@context" : "https://schema.org",
     "@type" : "Person",
     "name" : {{ site.author.name | jsonify }},
     "url" : {{ base_path | jsonify }},
-    "sameAs" : [
-      {% if site.author.github %}"https://github.com/{{ site.author.github }}"{% endif %}{% if site.author.github and site.author.linkedin %},{% endif %}
-      {% if site.author.linkedin %}"https://www.linkedin.com/in/{{ site.author.linkedin }}"{% endif %}
-    ]
+    "sameAs" : {{ same_as | remove_first: "|" | split: "|" | jsonify }}
   }
 </script>
 

@@ -8,9 +8,10 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Home"
+title                    : &name "Jeongmin Lee"
+home_label               : "Home"  # text of the masthead link to the home page
 title_separator          : "-"
-name                     : &name "Jeongmin Lee"
+name                     : *name
 description              : &description "Undergraduate Researcher | Computer Architecture & Systems"
 url                      : "https://jeongminl.github.io" 
 baseurl                  : "" 
@@ -36,7 +37,7 @@ bing_site_verification   :
 # Social Sharing
 twitter:
   username               :
-og_image                 :
+og_image                 : "profile.jpg"  # in /images/
 og_description           :
 
 # Analytics

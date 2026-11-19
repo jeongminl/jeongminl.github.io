@@ -1,64 +1,16 @@
 ---
-title: "AWARDS & HONORS"
+title: "Awards & Honors"
 permalink: /awards/
 ---
 
 <div class="timeline-container">
-
+  {% for a in site.data.cv.awards %}
   <div class="timeline-item">
-    <div class="timeline-date">2026</div>
+    <div class="timeline-date">{{ a.year }}</div>
     <div class="timeline-content">
-      <strong>IPESK Next-Generation Engineer</strong> — South Korea<br>
-      <span class="timeline-meta">Awarded to top students in nationwide research universities.</span>
+      <strong>{{ a.title }}</strong> — {{ a.region }}<br>
+      <span class="timeline-meta">{{ a.note }}</span>
     </div>
   </div>
-
-  <div class="timeline-item">
-    <div class="timeline-date">2025</div>
-    <div class="timeline-content">
-      <strong>National Science &amp; Technology Scholarship</strong> — South Korea<br>
-      <span class="timeline-meta">Awarded to top engineering and science students nationwide.</span>
-    </div>
-  </div>
-
-  <div class="timeline-item">
-    <div class="timeline-date">2025</div>
-    <div class="timeline-content">
-      <strong>Department Honors Scholarship (Valedictorian)</strong> — KAIST<br>
-      <span class="timeline-meta">Awarded to the top student in each department per semester.</span>
-    </div>
-  </div>
-
-  <div class="timeline-item">
-    <div class="timeline-date">2025</div>
-    <div class="timeline-content">
-      <strong>Dean's List, School of Computing</strong> — KAIST<br>
-      <span class="timeline-meta">Awarded to the top 3% of students in the School of Computing per semester.</span>
-    </div>
-  </div>
-
-  <div class="timeline-item">
-    <div class="timeline-date">2020</div>
-    <div class="timeline-content">
-      <strong>Outstanding Award, International Mathematical Modelling Challenge</strong> — World<br>
-      <span class="timeline-meta">Highest award in the challenge, given to the top 2 teams out of 54 participating teams worldwide.</span>
-    </div>
-  </div>
-
-  <div class="timeline-item">
-    <div class="timeline-date">2018</div>
-    <div class="timeline-content">
-      <strong>Korean Association in Singapore Scholarship</strong> — Singapore<br>
-      <span class="timeline-meta">Awarded to top Korean students in Singapore.</span>
-    </div>
-  </div>
-
-  <div class="timeline-item">
-    <div class="timeline-date">2018</div>
-    <div class="timeline-content">
-      <strong>First Place &amp; POSB Award, i.code</strong> — Singapore<br>
-      <span class="timeline-meta">National Infocomm Competition.</span>
-    </div>
-  </div>
-
+  {% endfor %}
 </div>

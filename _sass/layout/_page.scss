@@ -43,6 +43,10 @@
   line-height: 1;
   color: var(--global-primary-color);
   font-weight: 700;
+
+  &--caps {
+    text-transform: uppercase;
+  }
 }
 
 .page__content {

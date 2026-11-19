@@ -14,25 +14,25 @@
 
   <div class="author__links">
     {% if author.email %}
-      <a href="mailto:{{ author.email }}" title="Email"><i class="fas fa-envelope author__icon author__icon--email"></i></a>
+      <a href="mailto:{{ author.email }}" title="Email" aria-label="Email"><i class="fas fa-envelope author__icon author__icon--email" aria-hidden="true"></i></a>
     {% endif %}
     {% if author.googlescholar %}
-      <a href="https://scholar.google.com/citations?user={{ author.googlescholar }}" target="_blank" rel="noopener" title="Google Scholar"><i class="fas fa-graduation-cap author__icon author__icon--scholar"></i></a>
+      <a href="https://scholar.google.com/citations?user={{ author.googlescholar }}" target="_blank" rel="noopener" title="Google Scholar" aria-label="Google Scholar"><i class="fas fa-graduation-cap author__icon author__icon--scholar" aria-hidden="true"></i></a>
     {% endif %}
     {% if author.github %}
-      <a href="https://github.com/{{ author.github }}" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github author__icon author__icon--github"></i></a>
+      <a href="https://github.com/{{ author.github }}" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub"><i class="fab fa-github author__icon author__icon--github" aria-hidden="true"></i></a>
     {% endif %}
     {% if author.linkedin %}
-      <a href="https://www.linkedin.com/in/{{ author.linkedin }}" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin author__icon author__icon--linkedin"></i></a>
+      <a href="https://www.linkedin.com/in/{{ author.linkedin }}" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin author__icon author__icon--linkedin" aria-hidden="true"></i></a>
     {% endif %}
     {% if author.orcid %}
-      <a href="https://orcid.org/{{ author.orcid }}" target="_blank" rel="noopener" title="ORCID"><i class="fab fa-orcid author__icon author__icon--orcid"></i></a>
+      <a href="https://orcid.org/{{ author.orcid }}" target="_blank" rel="noopener" title="ORCID" aria-label="ORCID"><i class="fab fa-orcid author__icon author__icon--orcid" aria-hidden="true"></i></a>
     {% endif %}
   </div>
 
   <div class="author__cv">
-    <a href="{{ base_path }}/files/cv.pdf" target="_blank" class="cv-button">
-      <i class="fas fa-file-pdf"></i> Download CV
+    <a href="{{ base_path }}/files/cv.pdf" target="_blank" rel="noopener" class="cv-button">
+      <i class="fas fa-file-pdf" aria-hidden="true"></i> Download CV
     </a>
   </div>
 

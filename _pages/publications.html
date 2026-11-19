@@ -1,42 +1,39 @@
 ---
-title: "PUBLICATIONS"
+title: "Publications"
 permalink: /publications/
 ---
 
 {% if site.author.googlescholar %}
 <div class="collab-box">
-  You can also find my articles with the latest citations on <a href="https://scholar.google.com/citations?user={{ site.author.googlescholar }}">my Google Scholar profile</a>.
+  You can also find my articles with the latest citations on <a href="https://scholar.google.com/citations?user={{ site.author.googlescholar }}" target="_blank" rel="noopener">my Google Scholar profile</a>.
 </div>
 {% endif %}
 
-<h2 class="section-title">In Submission</h2>
+{% assign me = site.author.name %}
+{% assign me_bold = "<strong>" | append: me | append: "</strong>" %}
+
+{% for group in site.data.cv.publications %}
+<h2 class="section-title">{{ group.section }}</h2>
 <ol class="pub-list">
-
+  {% for p in group.items %}
+  {% capture pid %}pub-{{ forloop.parentloop.index }}-{{ forloop.index }}{% endcapture %}
   <li>
-    <span class="paper-title">Lachesis: Lifetime-Aware KV Cache Placement for Agent Serving across HBM and High-Bandwidth Flash</span>
-    <div class="authors-list">Jaehoon Yang, <strong>Jeongmin Lee</strong>, Haneul Park, Seung Yul Lee, Nam Sung Kim, and Jae W. Lee, (2026).</div>
+    <span class="paper-title">{{ p.title }}</span>
+    <div class="authors-list">{{ p.authors | replace: me, me_bold }} ({{ p.year }}).</div>
     <div class="paper-meta">
-      <button type="button" class="meta-btn venue-btn" data-toggle="venue">In Submission '26</button>
-      <a class="meta-btn link-btn" href="https://arxiv.org/abs/2610.08378" target="_blank" rel="noopener">arXiv</a>
-      <button type="button" class="meta-btn abstract-btn" data-toggle="summary">Summary</button>
+      <button type="button" class="meta-btn venue-btn" data-toggle="venue" aria-expanded="false" aria-controls="{{ pid }}-venue">{{ p.venue_short }}</button>
+      {% for l in p.links %}
+      <a class="meta-btn link-btn" href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }}</a>
+      {% endfor %}
+      {% if p.summary %}
+      <button type="button" class="meta-btn abstract-btn" data-toggle="summary" aria-expanded="false" aria-controls="{{ pid }}-summary">Summary</button>
+      {% endif %}
     </div>
-    <div class="info-box info-box--venue"><strong>Venue:</strong> In Submission</div>
-    <div class="info-box info-box--summary">
-      <p>Proposes a lifetime-informed KV cache routing and placement mechanism to reduce flash wear on High Bandwidth Flash when used in heterogeneous memory systems for Agentic AI serving scenarios, extending flash lifetime by up to 3x.</p>
-    </div>
+    <div class="info-box info-box--venue" id="{{ pid }}-venue"><strong>Venue:</strong> {{ p.venue }}</div>
+    {% if p.summary %}
+    <div class="info-box info-box--summary" id="{{ pid }}-summary"><p>{{ p.summary }}</p></div>
+    {% endif %}
   </li>
-
-  <li>
-    <span class="paper-title">ForeSight: Reactive Long-Horizon Task Execution with Autoregressive Planning and Monitoring</span>
-    <div class="authors-list">Yeseung Kim, Gyungjin Eo, Jisang Park, <strong>Jeongmin Lee</strong>, Jun Park, and Daehyung Park, (2026).</div>
-    <div class="paper-meta">
-      <button type="button" class="meta-btn venue-btn" data-toggle="venue">In Submission '26</button>
-      <button type="button" class="meta-btn abstract-btn" data-toggle="summary">Summary</button>
-    </div>
-    <div class="info-box info-box--venue"><strong>Venue:</strong> In Submission</div>
-    <div class="info-box info-box--summary">
-      <p>Investigates reactive long-horizon task execution through autoregressive planning and continuous monitoring, providing robust robotic replanning capabilities of 50+% success rate when faced with action execution disruptions.</p>
-    </div>
-  </li>
-
+  {% endfor %}
 </ol>
+{% endfor %}
