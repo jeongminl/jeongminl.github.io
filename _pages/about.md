@@ -11,7 +11,7 @@ redirect_from:
 </div>
 
 <div class="content-text">
-  I am also an undergraduate researcher at <strong>Litz Lab, UC Santa Cruz</strong>, advised by <a href="https://hlitz.github.io/">Prof. Heiner Litz</a>, where I worked in person during my exchange program (Jan – Jun 2026) and have continued remotely since.
+  I was also an undergraduate researcher at <strong>Litz Lab, UC Santa Cruz</strong>, advised by <a href="https://hlitz.github.io/">Prof. Heiner Litz</a>.
 </div>
 
 {% comment %}
