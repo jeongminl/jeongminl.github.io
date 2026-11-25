@@ -7,7 +7,7 @@ redirect_from:
 ---
 
 <div class="content-text">
-  I am an undergraduate student in Computer Science at the <strong>Korea Advanced Institute of Science and Technology (KAIST)</strong> and an undergraduate researcher at <strong>ARC Lab, Seoul National University</strong>, advised by <a href="https://iamjaelee.github.io/www/">Prof. Jae W. Lee</a>. I am interested in computer architecture, with a focus on accelerator architecture and memory systems for machine learning and robotics workloads.
+  I am an undergraduate student in Computer Science at the <strong>Korea Advanced Institute of Science and Technology (KAIST)</strong> and an undergraduate researcher at <strong>ARC Lab, Seoul National University</strong>, advised by <a href="https://iamjaelee.github.io/www/">Prof. Jae W. Lee</a>. I am interested in computer architecture, with a focus on memory systems and accelerator architecture, and hardware-software co-design for machine learning and robotics.
 </div>
 
 <div class="content-text">
@@ -29,6 +29,7 @@ redirect_from:
   <span class="pill">Computer Architecture</span>
   <span class="pill">Accelerator Architecture</span>
   <span class="pill">Memory Systems</span>
+  <span class="pill">HW-SW Co-Design</span>
   {% comment %}<span class="pill">Systems for ML</span>
   <span class="pill">Heterogeneous Memory</span>{% endcomment %}
 </div>

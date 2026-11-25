@@ -26,9 +26,17 @@ permalink: /experience/
     <div class="timeline-content">
       <strong>{{ x.role }}</strong> — {{ x.org }}
       {% if x.meta %}<br><span class="timeline-meta">{{ x.meta }}</span>{% endif %}
+      {% for p in x.projects %}
+      <div class="experience-project">{{ p.name }}</div>
+      <ul class="experience-desc">
+        {% for b in p.bullets %}<li>{{ b }}</li>{% endfor %}
+      </ul>
+      {% endfor %}
+      {% if x.bullets %}
       <ul class="experience-desc">
         {% for b in x.bullets %}<li>{{ b }}</li>{% endfor %}
       </ul>
+      {% endif %}
     </div>
   </div>
   {% endfor %}
@@ -44,7 +52,7 @@ permalink: /experience/
   {% endfor %}
 </div>
 
-<h2 class="section-title">Other Experience</h2>
+<h2 class="section-title">Work Experience</h2>
 <div class="timeline-container timeline-container--wide">
   {% for x in cv.other %}
   <div class="timeline-item">

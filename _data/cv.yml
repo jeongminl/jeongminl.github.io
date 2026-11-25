@@ -6,7 +6,7 @@ education:
     degree: "B.S. in Computer Science"
     school: "Korea Advanced Institute of Science and Technology (KAIST)"
     location: "Daejeon, South Korea"
-    meta: "GPA: 4.17 / 4.3 · Expected Graduation: Jun 2027"
+    meta: "GPA: 4.17 / 4.3 · Expected Graduation: Aug 2027"
     notes:
       - "Includes 18 months of mandatory military service (Jul 2023 – Jan 2025)."
       - "Relevant Coursework: Systems Programming, Computer Organization, Operating Systems, Introduction to Artificial Intelligence, Machine Learning Basics and Applications."
@@ -30,36 +30,51 @@ research:
     role: "Undergraduate Researcher"
     org: "ARC Lab, Seoul National University"
     meta: "Advisor: Prof. Jae W. Lee"
-    bullets:
-      - "Co-designed Lachesis, a lifetime-aware KV cache placement scheme for agent serving on heterogeneous HBM + High-Bandwidth Flash memory, extending projected flash lifetime by up to 4× over a naive LRU baseline (second author, under review)."
-      - "Extended an open-source LLM-serving simulator with two-tier HBM/HBF timing, flash-wear accounting and KV placement policies; led implementation of the memory allocation scheme."
-      - "Proposed the threshold-based allocation policy adopted in the final design, after finding in preliminary runs that greedily filling HBM left no room for future shorter-lived KV cache."
-      - "Leading the acceleration of GPU kernels used in broad-phase collision detection for robotics simulation, speeding up bounding volume hierarchy tree builds and traversal by 5×."
+    projects:
+      - name: "Lachesis: KV Cache Placement across HBM and High-Bandwidth Flash"
+        bullets:
+          - "Co-designed a lifetime-aware KV cache placement scheme for agent serving on heterogeneous HBM + High-Bandwidth Flash memory, extending projected flash lifetime by <strong>up to 4×</strong> over a naive HBM-first LRU baseline (second author, under review)."
+          - "Led overall implementation and experimentation of the project. Extended the Frontier simulator with the roofline pricing kernels of LLMSimulator and augmented the result with two-tier HBM/HBF timing, flash-wear accounting, complete agentic trace support and KV placement policies."
+          - "Proposed the threshold-based allocation policy adopted in the final design, after finding in preliminary runs that greedily filling HBM left no room for future shorter-lived KV cache."
+      - name: "GPU-Accelerated Collision Detection for Robotics Simulation"
+        bullets:
+          - "Leading the acceleration of GPU kernels for broad-phase collision detection, speeding up bounding volume hierarchy (BVH) builds and traversal by <strong>up to 6×</strong> over the initial set of kernels."
+          - "Diagnosed the BVH build as memory-bandwidth bound, with its sort moving every bounding box through DRAM eight times, and traversal as bound by cache traffic and chains of dependent loads."
+          - "Adapted a hybrid radix sort that partitions boxes into ranges fitting in shared memory, and packed both child nodes into each parent to cut loads per traversal step."
+          - "Evaluated and rejected ray-tracing cores as an alternative; recasting queries as rays produced up to 1,700× more candidate tests than real pairs."
 
   - date: "Jan 2026 – Present"
     role: "Undergraduate Researcher"
     org: "Litz Lab, UC Santa Cruz"
     meta: "Advisor: Prof. Heiner Litz · in person Jan – Jun 2026, remote since"
-    bullets:
-      - "Probed row-buffer timing covert channels and disturbance side channels on a novel STTRAM module."
-      - "Built characterization infrastructure on an XUP-P3R FPGA, including a configurable traffic generator with latency-histogram and bandwidth counters, and user-space access via XDMA (MMIO/DMA)."
-      - "Found and fixed bugs in the vendor-provided memory-controller patch, including an ECC correction path that overwrote corrected data with another cache line’s contents."
+    projects:
+      - name: "STT-MRAM Characterization"
+        bullets:
+          - "Built characterization infrastructure for a STT-MRAM module on an XUP-P3R FPGA, including a configurable traffic generator with latency-histogram and bandwidth counters, and user-space access via XDMA (MMIO/DMA)."
+          - "Found and fixed bugs in the vendor-provided memory-controller patch, including timing mismatches, truncated memory timing values, and an ECC correction path that overwrote corrected data with another cache line’s contents."
+          - "Probed row-buffer timing covert channels and disturbance side channels."
 
   - date: "Jul 2025 – Dec 2025"
     role: "Undergraduate Researcher"
     org: "VIA Group, KAIST"
     meta: "Advisor: Prof. Minsoo Rhu"
-    bullets:
-      - "Reproduced SCNN (ISCA ’17), a sparse CNN accelerator, as a cycle-level C++ simulator and evaluated its speedup over dense computation."
-      - "Reimplemented vDNN (MICRO ’16) in C++ and CUDA: a runtime memory manager that overlaps GPU-to-CPU offloading and prefetching with computation to reduce GPU memory usage during DNN training."
+    projects:
+      - name: "Sparse CNN Accelerator Simulator (SCNN, ISCA ’17)"
+        bullets:
+          - "Reproduced SCNN as a cycle-level C++ simulator and evaluated its speedup over dense computation."
+      - name: "GPU Memory Virtualization for DNN Training (vDNN, MICRO ’16)"
+        bullets:
+          - "Reimplemented vDNN in C++ and CUDA: a runtime memory manager that overlaps GPU-to-CPU offloading and prefetching with computation to reduce GPU memory usage during DNN training."
 
   - date: "Feb 2025 – Jul 2025"
     role: "Undergraduate Researcher"
     org: "RIRO Lab, KAIST"
     meta: "Advisor: Prof. Daehyung Park"
-    bullets:
-      - "Developed a long-horizon planning and replanning module for ForeSight (under review), reaching 70+% replanning success under action-execution disruptions vs. 50% for the strongest baseline."
-      - "Implemented seven LLM-based planning and replanning baselines (e.g., ProgPrompt, Inner Monologue, DoReMi) in the AI2-THOR simulator."
+    projects:
+      - name: "ForeSight: Reactive Long-Horizon Task Execution"
+        bullets:
+          - "Developed the long-horizon planning and replanning module (under review) which uses grammar-constrained scene graphs to detect environmental changes for plan adjustment, reaching over 70% replanning success under action-execution disruptions vs. 50% for the strongest baseline."
+          - "Implemented seven VLM-based planning and replanning baselines, including ProgPrompt, Inner Monologue and DoReMi, in the AI2-THOR simulator."
 
 talks:
   - date: "2026"
@@ -84,7 +99,7 @@ publications:
         links:
           - label: "arXiv"
             url: "https://arxiv.org/abs/2610.08378"
-        summary: "A lifetime-aware KV cache placement scheme for agent serving on heterogeneous HBM + High-Bandwidth Flash memory, extending projected flash lifetime by up to 4× over a naive LRU baseline."
+        summary: "A lifetime-aware KV cache placement scheme for agent serving on heterogeneous HBM + High-Bandwidth Flash memory, extending projected flash lifetime by up to 4× over a naive HBM-first LRU baseline."
 
       - title: "ForeSight: Reactive Long-Horizon Task Execution with Autoregressive Planning and Monitoring"
         authors: "Yeseung Kim, Gyungjin Eo, Jisang Park, Jeongmin Lee, Jun Park, and Daehyung Park"
@@ -99,17 +114,17 @@ awards:
     region: "South Korea"
     note: "Awarded to top undergraduate students at research universities nationwide."
   - year: "2025"
-    title: "National Science &amp; Technology Scholarship"
-    region: "South Korea"
-    note: "Awarded to top engineering and science students nationwide."
+    title: "Dean’s List, School of Computing, Fall 2025"
+    region: "KAIST"
+    note: "Awarded each semester to the top 3% of students in the School of Computing."
   - year: "2025"
-    title: "Department Honors Scholarship (Valedictorian)"
+    title: "Department Honors Scholarship (Valedictorian), Spring 2025"
     region: "KAIST"
     note: "Awarded each semester to the top student in each department."
   - year: "2025"
-    title: "Dean’s List, School of Computing"
-    region: "KAIST"
-    note: "Awarded each semester to the top 3% of students in the School of Computing."
+    title: "National Science &amp; Technology Scholarship"
+    region: "South Korea"
+    note: "Awarded to top engineering and science students nationwide."
   - year: "2020"
     title: "Outstanding Award, International Mathematical Modelling Challenge"
     region: "International"
